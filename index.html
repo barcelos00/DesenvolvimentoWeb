@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFTCAR - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Requisito 3: Mínimo 5 nomes no menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="textos.html">Artigos</a>
+        <a href="tabela.html">Especificações</a>
+        <a href="documentos.html">Documentos (Wireframes)</a>
+    </nav>
+
+    <div class="container">
+        <h1 onmouseover="destacarTexto(this)" onmouseout="restaurarTexto(this)">Bem-vindo à SOFTCAR</h1>
+        <p>A sua concessionária digital de veículos esportivos e de luxo.</p>
+        
+        <button onclick="exibirBoasVindas()" style="padding: 10px; cursor: pointer;">Clique aqui</button>
+
+        <!-- Requisito 11: 4 Propagandas de patrocinadores -->
+        <h2>Nossos Patrocinadores</h2>
+        <div class="sponsors">
+            <!-- Substitua os 'src' pelas logos reais salvas na sua pasta -->
+            <img src="patrocinador1.png" alt="Patrocinador 1 (Ex: Michelin)">
+            <img src="patrocinador2.png" alt="Patrocinador 2 (Ex: Motul)">
+            <img src="patrocinador3.png" alt="Patrocinador 3 (Ex: Brembo)">
+            <img src="patrocinador4.png" alt="Patrocinador 4 (Ex: Pirelli)">
+        </div>
+    </div>
+
+    <!-- Rodape -->
+    <footer>
+        <p>Curso: Ciência da Computação - UniCEUB | Disciplina: Desenvolvimento Web | Turma: B</p>
+        <p>Integrantes do Grupo 6: Victor Barcelos, Gabriel Henrique, Lucas Werneck, Victor Silva</p>
+    </footer>
+
+</body>
+</html>

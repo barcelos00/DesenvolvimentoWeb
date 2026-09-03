@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SOFTCAR - Especificações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="textos.html">Artigos</a>
+        <a href="tabela.html">Especificações</a>
+        <a href="documentos.html">Documentos</a>
+    </nav>
+
+    <div class="container">
+        <h2>Comparativo Técnico de Veículos</h2>
+        <table>
+            <!-- Linha 1 (Cabeçalho) -->
+            <tr style="background-color: #d32f2f; color: white;">
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Motor</th>
+                <th>0-100 km/h</th>
+                <th>Preço</th>
+            </tr>
+            <!-- Linhas de Dados com Mesclagens -->
+            <tr>
+                <td rowspan="3" style="background-color: #fca5a5;">Porsche</td> <!-- Rowspan 1 -->
+                <td style="background-color: #fef08a;">911 Carrera</td>
+                <td style="background-color: #bbf7d0;">3.0 Boxer</td>
+                <td style="background-color: #bfdbfe;">4.2s</td>
+                <td style="background-color: #e9d5ff;">R$ 900.000</td>
+            </tr>
+            <tr>
+                <td style="background-color: #fef08a;">GT3 RS</td>
+                <td style="background-color: #bbf7d0;">4.0 Boxer V6</td>
+                <td colspan="2" style="background-color: #fed7aa;">Consultar Concessionária</td> <!-- Colspan 1 -->
+            </tr>
+            <tr>
+                <td style="background-color: #fef08a;">Taycan</td>
+                <td colspan="3" style="background-color: #99f6e4;">Elétrico - Especificações Variáveis</td> <!-- Colspan 2 -->
+            </tr>
+            <tr>
+                <td rowspan="2" style="background-color: #fca5a5;">Ferrari</td> <!-- Rowspan 2 -->
+                <td style="background-color: #fef08a;">458 Speciale</td>
+                <td rowspan="2" style="background-color: #bbf7d0;">V8 Aspirado</td> <!-- Rowspan 3 -->
+                <td style="background-color: #bfdbfe;">3.0s</td>
+                <td style="background-color: #e9d5ff;">R$ 3.5M</td>
+            </tr>
+            <tr>
+                <td style="background-color: #fef08a;">F8 Tributo</td>
+                <td style="background-color: #bfdbfe;">2.9s</td>
+                <td style="background-color: #e9d5ff;">R$ 4.0M</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="background-color: #fca5a5;">BMW</td> <!-- Rowspan 4 -->
+                <td style="background-color: #fef08a;">M2</td>
+                <td style="background-color: #bbf7d0;">3.0 TwinPower</td>
+                <td style="background-color: #bfdbfe;">4.1s</td>
+                <td style="background-color: #e9d5ff;">R$ 600.000</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="background-color: #fbcfe8;">Outros modelos em breve...</td> <!-- Colspan 3 -->
+            </tr>
+            <!-- Adicione as linhas restantes (8 a 15) preenchendo com TDs normais para completar as 15 exigidas -->
+            <tr style="background-color: #e2e8f0;"><td>Audi</td><td>R8</td><td>V10</td><td>3.2s</td><td>R$ 1.5M</td></tr>
+            <tr style="background-color: #cbd5e1;"><td>Nissan</td><td>GTR</td><td>V6 Bi-Turbo</td><td>2.8s</td><td>R$ 1.2M</td></tr>
+            <tr style="background-color: #e2e8f0;"><td colspan="5" style="background-color: #a78bfa; color: white;">Fim da Tabela de Alta Performance</td></tr> <!-- Colspan 4 -->
+            <!-- Continue até dar 15 linhas no total (contando com o cabeçalho) -->
+        </table>
+    </div>
+</body>
+</html>
