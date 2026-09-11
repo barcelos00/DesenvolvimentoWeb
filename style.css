@@ -98,3 +98,22 @@ footer {
     font-size: 0.9em;
     margin-top: 20px;
 }
+
+/* Configuração da Galeria em 3 Colunas */
+.grid-galeria {
+    display: grid;
+    /* Cria 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr);
+    /* Espaçamento entre as fotos */
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+/* Padronizando o tamanho de todas as 25 fotos */
+.grid-galeria img {
+    width: 100%;
+    height: 250px; /* Define uma altura fixa para todas */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem amassar ou esticar */
+    border-radius: 8px; /* Deixa as bordas levemente arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
