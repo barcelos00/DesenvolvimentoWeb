@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SOFTCAR - Home</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
 
     <nav>
@@ -17,25 +22,583 @@
         <a href="documentos.html">Documentos (Wireframes)</a>
     </nav>
 
-    <div class="container">
-        <h1 onmouseover="destacarTexto(this)" onmouseout="restaurarTexto(this)">Bem-vindo à SOFTCAR</h1>
-        <p>A sua concessionária digital de veículos esportivos e de luxo.</p>
-        
-        <button onclick="exibirBoasVindas()" style="padding: 10px; cursor: pointer;">Clique aqui</button>
-<!-- logos de patrocinio -->
+    <div class="container index">
+
+        <h1>Bem-vindo à SOFTCAR</h1>
+
+        <p class="descricao-site">
+            A sua concessionária digital de veículos esportivos e de luxo.
+        </p>
+
+        <button onclick="exibirBoasVindas()">
+            Clique aqui
+        </button>
+
+
+        <!-- =========================================
+             CATÁLOGO DE VEÍCULOS
+             ========================================= -->
+
+        <section class="produtos">
+
+            <h2>Veículos em destaque</h2>
+
+            <p class="descricao-produtos">
+                Conheça alguns dos modelos disponíveis em nossa concessionária.
+            </p>
+
+
+            <!-- CARRO 1 -->
+
+            <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="carro1">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARRO 2 -->
+
+            <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/2025-Porsche-Taycan-5-1536x864-1.png"
+                         alt="carro2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>Porche Taycan</h3>
+
+                    <p>
+                        Modelo esportivo com design marcante,
+                        tecnologia avançada e alto desempenho.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 410.000,00
+                        </p>
+
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="indisponivel">Indisponivel</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            12.300 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.porsche.com/brazil/pt/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARRO 3 -->
+
+            <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/Porsche-911-GT3-RS-1-750x450.png"
+                         alt="carro 3">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>Porche 911 GT3</h3>
+
+                    <p>
+                        Sedan premium desenvolvido para oferecer
+                        conforto, sofisticação e desempenho.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 520.000,00
+                        </p>
+
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            8.700 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2026
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.porsche.com/brazil/pt/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/f8-tributo-v0-m3i9lpacjzsd1.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>Ferrari Tributo</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="indisponivel">Indisponivel</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+             <article class="carro">
+
+                <div class="carro-imagem">
+
+                    <img src="imagens_ex/bmw-4565066_1280.png"
+                         alt="M2">
+
+                </div>
+
+
+                <div class="carro-informacoes">
+
+                    <h3>BMW M2</h3>
+
+                    <p>
+                        Um sedan esportivo que combina desempenho,
+                        tecnologia e conforto para o dia a dia.
+                    </p>
+
+                    <div class="carro-dados">
+
+                        <p>
+                            <strong>Preço:</strong>
+                            R$ 620.000,00
+                        </p>
+                        
+                        <div class="disponibilidade">
+                            <p>
+                                <strong>Disponibilidade:</strong>
+                                <span class="dispo">Disponível</span>
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Quilometragem:</strong>
+                            18.500 km
+                        </p>
+
+                        <p>
+                            <strong>Ano:</strong>
+                            2025
+                        </p>
+
+                    </div>
+
+                    <a class="botao-carro"
+                       href="https://www.bmw.com.br/"
+                       target="_blank">
+                        Site oficial
+                    </a>
+
+                </div>
+
+            </article>
+
+            
+
+
+        </section>
+
+
+        <!-- =========================================
+             PATROCINADORES
+             ========================================= -->
+
         <h2>Nossos Patrocinadores</h2>
+
         <div class="sponsors">
-            <img src="imagens/patrocionio/patrocinador1.png" alt="Patrocinador 1">
-            <img src="imagens/patrocionio/patrocinador2.png" alt="Patrocinador 2">
-            <img src="imagens/patrocionio/patrocinador3.png" alt="Patrocinador 3">
-            <img src="imagens/patrocionio/patrocinador4.png" alt="Patrocinador 4">
+            
+            <img src="imagens/patrocionio/patrocinador1.png"
+                 alt="Patrocinador 1">
+
+            <img src="imagens/patrocionio/patrocinador2.png"
+                 alt="Patrocinador 2">
+
+            <img src="imagens/patrocionio/patrocinador3.png"
+                 alt="Patrocinador 3">
+
+            <img src="imagens/patrocionio/patrocinador4.png"
+                 alt="Patrocinador 4">
+
         </div>
+
     </div>
 
+
     <footer>
-        <p>Curso: Ciência da Computação - UniCEUB | Disciplina: Desenvolvimento Web | Turma: B</p>
-        <p>Integrantes do Grupo 6: Victor Barcelos, Gabriel Henrique, Lucas Werneck, Victor Silva</p>
+
+        <p>
+            Curso: Ciência da Computação - UniCEUB |
+            Disciplina: Desenvolvimento Web |
+            Turma: B
+        </p>
+
+        <p>
+            Integrantes do Grupo 6:
+            Victor Barcelos,
+            Gabriel Henrique,
+            Lucas Werneck,
+            Victor Silva
+        </p>
+
     </footer>
 
 </body>
+
 </html>
