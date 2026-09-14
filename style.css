@@ -1,20 +1,52 @@
-
+/* ==========================================================================
+   1. GERAL (Aplica-se a todas as páginas)
+   ========================================================================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
+    background-image: url('imagens/fundo.jpg');
+    /* Requisito 5: Fundo sem repetição */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
 }
 
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 80vh;
+}
 
+.container h2 {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container h1:hover {
+    color: #cb1010;
+    transition: 0.3s;
+}
+
+.container h3 {
+    color: white;
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO E RODAPÉ (NAV / FOOTER)
+   ========================================================================== */
 nav {
     background-color: #d32f2f;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
@@ -32,44 +64,21 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.container {
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    min-height: 80vh;
-}
-
-
-.container h2 {
-    color: #d32f2f;
+footer {
+    background-color: #111;
+    color: #aaa;
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
 }
 
-
-.container h1:hover {
-    color: #cb1010;
-    transition: 0.3s;
-}
-
-.container h3{
-    color: white;
-}
-
-/* =========================================
-   CATÁLOGO DE VEÍCULOS
-   ========================================= */
-
+/* ==========================================================================
+   3. PÁGINA INICIAL (index.html) - Catálogo e Patrocinadores
+   ========================================================================== */
 .produtos {
     margin-top: 50px;
 }
-
-
-/* Descrição do catálogo */
 
 .descricao-produtos {
     text-align: center;
@@ -77,85 +86,51 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
-/* Cada carro */
-
 .carro {
     display: flex;
     align-items: center;
     gap: 30px;
-
     background-color: rgba(20, 20, 20, 0.90);
-
     border: 1px solid #333;
     border-left: 4px solid #d32f2f;
-
     border-radius: 8px;
-
     padding: 20px;
     margin-bottom: 25px;
-
     transition: 0.3s;
 }
 
-
-/* Efeito ao passar o mouse */
-
 .carro:hover {
     transform: translateX(5px);
-
     border-color: #d32f2f;
-
     box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
 }
-
-
-/* Área da imagem */
 
 .carro-imagem {
     width: 45%;
 }
 
-
-/* Imagem do carro */
-
 .carro-imagem img {
     width: 100%;
     height: 280px;
-
     object-fit: cover;
-
     border-radius: 6px;
 }
-
-
-/* Informações */
 
 .carro-informacoes {
     flex: 1;
 }
 
-
-/* Nome do carro */
-
 .carro-informacoes h3 {
     color: #d32f2f;
-
     font-size: 25px;
-
     margin-top: 0;
     margin-bottom: 10px;
-
     border-bottom: none;
     padding-bottom: 0;
 }
 
-
-/* Descrição */
-
-.carro-informacoes > p {
+.carro-informacoes>p {
     color: #ddd;
-
     line-height: 1.6;
 }
 
@@ -167,91 +142,57 @@ nav a:hover {
     color: #dc0a0a;
 }
 
-
-/* Dados do veículo */
-
 .carro-dados {
     margin-top: 20px;
-
     border-top: 1px solid #333;
-
     padding-top: 10px;
 }
 
-
-/* Informações individuais */
-
 .carro-dados p {
     margin: 8px 0;
-
     color: #ccc;
 }
-
-
-/* Destaque dos nomes */
 
 .carro-dados strong {
     color: #fff;
 }
 
-
-/* Botão / link para site oficial */
-
 .botao-carro {
     display: inline-block;
-
     margin-top: 15px;
-
     padding: 12px 22px;
-
     background-color: #d32f2f;
-
     color: white;
-
     text-decoration: none;
-
     border-radius: 5px;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
-
-/* Hover do botão */
-
 .botao-carro:hover {
     background-color: #111;
-
     border: 1px solid #d32f2f;
 }
 
-
-/* =========================================
-   RESPONSIVIDADE DOS CARROS
-   ========================================= */
-
-@media (max-width: 700px) {
-
-    .carro {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .carro-imagem {
-        width: 100%;
-    }
-
-    .carro-imagem img {
-        height: 220px;
-    }
-
+/* Patrocinadores (Requisito 11) */
+.sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
+.sponsors img {
+    max-width: 150px;
+}
 
-
- .empresa > p:first-of-type /{ 
+/* ==========================================================================
+   4. PÁGINA EMPRESA / DOCUMENTOS (empresa.html e documentos.html)
+   ========================================================================== */
+.empresa>p:first-of-type {
     background-color: rgba(255, 255, 255, 0.06);
     border-left: 4px solid #d32f2f;
     padding: 18px 20px;
@@ -260,17 +201,11 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
-/* Lista do briefing */
-
 .empresa ol {
     padding-left: 0;
     list-style: none;
     counter-reset: briefing;
 }
-
-
-/* Cada item do briefing */
 
 .empresa ol li {
     counter-increment: briefing;
@@ -283,9 +218,6 @@ nav a:hover {
     position: relative;
     transition: 0.3s;
 }
-
-
-/* Número de cada item */
 
 .empresa ol li::before {
     content: counter(briefing);
@@ -304,25 +236,16 @@ nav a:hover {
     font-size: 16px;
 }
 
-
-/* Efeito ao passar o mouse */
-
 .empresa ol li:hover {
     transform: translateX(5px);
     border-color: #d32f2f;
     box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
 }
 
-
-/* Título de cada item */
-
 .empresa ol li strong {
     color: #d32f2f;
     font-size: 17px;
 }
-
-
-/* Texto de cada item */
 
 .empresa ol li p {
     color: #dddddd;
@@ -331,18 +254,12 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-
- /* Área do botão voltar */
-
- .empresa > p:last-child {
+.empresa>p:last-child {
     text-align: center;
     margin-top: 35px;
 }
 
-
-/* Botão voltar ao início */
-
- .empresa > p:last-child a {
+.empresa>p:last-child a {
     display: inline-block;
     background-color: #d32f2f;
     color: white;
@@ -351,60 +268,42 @@ nav a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
-} 
+}
 
-.empresa >  a:hover {
+.empresa>p:last-child a:hover {
     background-color: #111;
     border: 1px solid #d32f2f;
-} 
+}
 
-
-/* =========================================
-   GALERIA
-   ========================================= */
-
-.galeria {
+/* ==========================================================================
+   5. PÁGINA GALERIA (galeria.html - Requisito 4)
+   ========================================================================== */
+.galeria,
+.grid-galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    margin-top: 20px;
 }
 
-.galeria img {
+.galeria img,
+.grid-galeria img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
 
-.galeria img:hover {
+.galeria img:hover,
+.grid-galeria img:hover {
     transform: scale(1.05);
 }
 
-
-/* =========================================
-   PATROCINADORES
-   ========================================= */
-
-.sponsors {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.sponsors img {
-    max-width: 150px;
-}
-
-
-/* =========================================
-   TABELAS
-   ========================================= */
-
+/* ==========================================================================
+   6. PÁGINA TABELAS (tabela.html - Requisito 12)
+   ========================================================================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -419,44 +318,26 @@ td {
     text-align: center;
 }
 
-
-/* =========================================
-   RODAPÉ
-   ========================================= */
-
-footer {
-    background-color: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    margin-top: 20px;
+/* ==========================================================================
+   7. PÁGINA TEXTOS E ÂNCORAS (textos.html - Requisito 6)
+   ========================================================================== */
+.artigo-secao {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
 }
 
-
-/* =========================================
-   GALERIA EM 3 COLUNAS
-   ========================================= */
-
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
+.voltar-topo {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.grid-galeria img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-
-
+/* ==========================================================================
+   8. RESPONSIVIDADE MOBILE (@media queries)
+   ========================================================================== */
 @media (max-width: 700px) {
-
     .container {
         padding: 20px;
     }
@@ -469,6 +350,7 @@ footer {
         font-size: 20px;
     }
 
+    /* Ajustes da Empresa no celular */
     .container ol li {
         padding: 18px 15px 18px 60px;
     }
@@ -477,15 +359,29 @@ footer {
         left: 15px;
     }
 
+    /* Ajustes dos Carros e Galeria no celular */
+    .carro {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .carro-imagem {
+        width: 100%;
+    }
+
+    .carro-imagem img {
+        height: 220px;
+    }
+
     .galeria,
     .grid-galeria {
         grid-template-columns: 1fr;
     }
 
+    /* Ajustes do Menu no celular */
     nav a {
         float: none;
         width: 100%;
         box-sizing: border-box;
     }
 }
-
