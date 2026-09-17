@@ -29,11 +29,24 @@ body {
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+
+.container h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 38px;
+    text-decoration: underline;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
 }
 
 .container h1:hover {
     color: #cb1010;
     transition: 0.3s;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .container h3 {
@@ -136,10 +149,12 @@ footer {
 
 .disponibilidade .dispo {
     color: #4caf50;
+    font-weight: bold;
 }
 
 .disponibilidade .indisponivel {
     color: #dc0a0a;
+    font-weight: bold;
 }
 
 .carro-dados {
@@ -187,6 +202,10 @@ footer {
 
 .sponsors img {
     max-width: 150px;
+}
+
+.sponsors b {
+    color: #d32f2f;
 }
 
 /* ==========================================================================
@@ -419,3 +438,62 @@ td {
     transform: translateY(1px); /* O botão "afunda" quando clicado */
     box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
 }
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #d32f2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: #222222;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.link-item:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+    transform: translateX(10px);
+    border-left: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+.artigo-secao .artigo-texto {
+    color:#d32f2f;
+    font-weight: bold;
+}
+
+.citacao {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px 35px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid #d32f2f;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.citacao blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 22px;
+    font-style: italic;
+    color: #f0f0f0;
+    line-height: 1.8;
+    font-weight: 300;
+}
+

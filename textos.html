@@ -5,7 +5,7 @@
     <title>SOFTCAR - Artigos Automotivos</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilo extra apenas para dar espaçamento entre os textos e forçar a barra de rolagem */
+       
         .artigo-secao {
             margin-top: 50px;
             margin-bottom: 50px;
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <!-- Requisito 3: Barra de Navegação -->
+    <!--  Barra de Navegação -->
     <nav>
         <a href="index.html">Home</a>
         <a href="empresa.html">Empresa</a>
@@ -30,33 +30,34 @@
         <a href="tabela.html">Especificações</a>
         <a href="documentos.html">Documentos</a>
     </nav>
+        <!-- Nesta seção utilizamos o id para fazer com uqe seja possivel voltar ao inicio da tela -->
 
     <div class="container">
-        <!-- O ID "inicio" é a âncora principal para onde todos os links de voltar vão apontar -->
-        <h1 id="inicio">Índice de Artigos - Alta Performance</h1>
+        <h2 id="inicio">Índice de Artigos - Alta Performance</h2>
         <p>Clique em um dos temas abaixo para ir direto à leitura:</p>
 
-        <!-- SUMÁRIO COM OS LINKS DE ÂNCORA (Repare no uso da # no href) -->
+        <div class="Links">
         <ul>
-            <li><a href="#texto1">1. A História e Evolução da Porsche</a></li>
-            <li><a href="#texto2">2. Aerodinâmica na Ferrari 458 Speciale</a></li>
-            <li><a href="#texto3">3. A Potência da Linha BMW M</a></li>
-            <li><a href="#texto4">4. O Legado do Motor V8</a></li>
-            <li><a href="#texto5">5. Freios de Cerâmica e Carbono</a></li>
-            <li><a href="#texto6">6. O Futuro dos Superesportivos Elétricos</a></li>
-            <li><a href="#texto7">7. Suspensão Ativa Eletrônica</a></li>
-            <li><a href="#texto8">8. A Importância do Downforce</a></li>
-            <li><a href="#texto9">9. Design Automotivo de Luxo</a></li>
-            <li><a href="#texto10">10. Materiais Leves: Fibra de Carbono</a></li>
-            <li><a href="#texto11">11. Transmissão de Dupla Embreagem</a></li>
-            <li><a href="#texto12">12. Cuidados com Carros de Alta Performance</a></li>
-            <li><a href="#texto13">13. Pneus Slick vs. Semi-Slick</a></li>
-            <li><a href="#texto14">14. Turbocompressor vs. Supercharger</a></li>
+            <li><a href="#texto1" class="link-item">1. A História e Evolução da Porsche</a></li>
+            <li><a href="#texto2" class="link-item">2. Aerodinâmica na Ferrari 458 Speciale</a></li>
+            <li><a href="#texto3" class="link-item">3. A Potência da Linha BMW M</a></li>
+            <li><a href="#texto4" class="link-item">4. O Legado do Motor V8</a></li>
+            <li><a href="#texto5" class="link-item">5. Freios de Cerâmica e Carbono</a></li>
+            <li><a href="#texto6" class="link-item">6. O Futuro dos Superesportivos Elétricos</a></li>
+            <li><a href="#texto7" class="link-item">7. Suspensão Ativa Eletrônica</a></li>
+            <li><a href="#texto8" class="link-item">8. A Importância do Downforce</a></li>
+            <li><a href="#texto9" class="link-item">9. Design Automotivo de Luxo</a></li>
+            <li><a href="#texto10" class="link-item">10. Materiais Leves: Fibra de Carbono</a></li>
+            <li><a href="#texto11" class="link-item">11. Transmissão de Dupla Embreagem</a></li>
+            <li><a href="#texto12" class="link-item">12. Cuidados com Carros de Alta Performance</a></li>
+            <li><a href="#texto13" class="link-item">13. Pneus Slick vs. Semi-Slick</a></li>
+            <li><a href="#texto14" class="link-item">14. Turbocompressor vs. Supercharger</a></li>
         </ul>
+        </div>
 
         <hr style="margin: 40px 0; border: 1px solid #d32f2f;">
 
-        <!-- AS 14 SEÇÕES DE TEXTO -->
+        <!-- 14 seções de texto numeradas -->
 
         <div class="artigo-secao">
             <h2 id="texto1">1. A História e Evolução da Porsche</h2>
@@ -124,23 +125,58 @@
             <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
         </div>
 
-        <div class="artigo-secao">
+        <!-- Uso de lista NÃO ordenada com os types Circle e Square  -->
+
+       <div class="artigo-secao">
             <h2 id="texto12">12. Cuidados com Carros de Alta Performance</h2>
-            <p>Manter um superesportivo exige atenção meticulosa: trocas de óleo em menor quilometragem, combustível de alta octanagem e inspeção rigorosa dos componentes antes de levá-lo à pista.</p>
+            <p>Manter um superesportivo exige atenção meticulosa. Veja os principais pontos de revisão:</p>
+            <ul type="square">
+                <li>Trocas de óleo em menor quilometragem</li>
+                <li>Uso de combustível de alta octanagem
+                    <ul type="circle">
+                        <li>Gasolina Podium</li>
+                        <li>Octapro</li>
+                    </ul>
+                </li>
+                <li>Inspeção rigorosa dos componentes antes de levá-lo à pista</li>
+            </ul>
             <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
         </div>
+
+        <!-- Uso de lista ORDENADA com type alfabético Maiúsculo e Minúsculo -->
 
         <div class="artigo-secao">
             <h2 id="texto13">13. Pneus Slick vs. Semi-Slick</h2>
-            <p>Os pneus são a única área de contato com o solo. Enquanto pneus slick são exclusivos para pistas secas devido à aderência total, os semi-slicks são legalizados para as ruas e oferecem o meio-termo perfeito.</p>
+            <p>Os pneus são a única área de contato com o solo. Conheça as categorias:</p>
+            <ol type="A">
+                <li><strong>Slick:</strong> Exclusivos para pistas secas devido à aderência total.
+                    <ol type="a">
+                        <li>Macio (Qualificação)</li>
+                        <li>Duro (Corrida longa)</li>
+                    </ol>
+                </li>
+                <li><strong>Semi-Slick:</strong> Legalizados para as ruas e oferecem o meio-termo perfeito.</li>
+            </ol>
             <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
         </div>
 
+        <!-- Uso de lista por Definição -->
+
         <div class="artigo-secao">
             <h2 id="texto14">14. Turbocompressor vs. Supercharger</h2>
-            <p>Ambos forçam mais ar para dentro do motor para gerar mais potência. O turbo usa os gases do escapamento, o que pode gerar um leve atraso (lag), enquanto o supercharger é ligado direto ao motor, entregando força imediata.</p>
+            <p>Ambos forçam mais ar para dentro do motor para gerar mais potência. Entenda a diferença:</p>
+            <dl>
+                <dt><strong>Turbocompressor:</strong></dt>
+                <dd>Usa os gases do escapamento, o que pode gerar um leve atraso (lag).</dd>
+                
+                <dt><strong>Supercharger:</strong></dt>
+                <dd>É ligado direto ao motor, entregando força imediata.</dd>
+            </dl>
+            <p>Essa pressurização em motores de alta capacidade, como os de <span class="artigo-texto">2998 cm<sup>3</sup></span> (centímetros cúbicos), otimiza a queima da mistura ar-combustível, ajudando a equilibrar a eficiência do veículo e o controle na emissão de <span class="artigo-texto">CO<sub>2</sub></span> (dióxido de carbono).</p>
             <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
         </div>
+            
+
 
     </div>
 </body>
