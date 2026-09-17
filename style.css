@@ -1,13 +1,11 @@
-/* ==========================================================================
-   1. GERAL (Aplica-se a todas as páginas)
-   ========================================================================== */
+/* GERAL */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
     background-image: url('imagens/fundo.jpg');
-    /* Requisito 5: Fundo sem repetição */
+/* PLANO DE FUNDO */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -53,9 +51,8 @@ body {
     color: white;
 }
 
-/* ==========================================================================
-   2. NAVEGAÇÃO E RODAPÉ (NAV / FOOTER)
-   ========================================================================== */
+/* FOOTER E NAVEGAÇÃO*/
+
 nav {
     background-color: #d32f2f;
     overflow: hidden;
@@ -86,9 +83,8 @@ footer {
     margin-top: 20px;
 }
 
-/* ==========================================================================
-   3. PÁGINA INICIAL (index.html) - Catálogo e Patrocinadores
-   ========================================================================== */
+/* PAGINA INICCIAL */
+
 .produtos {
     margin-top: 50px;
 }
@@ -189,7 +185,7 @@ footer {
     border: 1px solid #d32f2f;
 }
 
-/* Patrocinadores (Requisito 11) */
+/* Patrocinadores  */
 .sponsors {
     display: flex;
     justify-content: space-around;
@@ -208,9 +204,8 @@ footer {
     color: #d32f2f;
 }
 
-/* ==========================================================================
-   4. PÁGINA EMPRESA / DOCUMENTOS (empresa.html e documentos.html)
-   ========================================================================== */
+/* EMPRESA/ DOCS */
+
 .empresa>p:first-of-type {
     background-color: rgba(255, 255, 255, 0.06);
     border-left: 4px solid #d32f2f;
@@ -294,9 +289,8 @@ footer {
     border: 1px solid #d32f2f;
 }
 
-/* ==========================================================================
-   5. PÁGINA GALERIA (galeria.html - Requisito 4)
-   ========================================================================== */
+/* GALERIA */
+
 .galeria,
 .grid-galeria {
     display: grid;
@@ -320,9 +314,8 @@ footer {
     transform: scale(1.05);
 }
 
-/* ==========================================================================
-   6. PÁGINA TABELAS (tabela.html - Requisito 12)
-   ========================================================================== */
+/* TABELAS */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -337,9 +330,8 @@ td {
     text-align: center;
 }
 
-/* ==========================================================================
-   7. PÁGINA TEXTOS E ÂNCORAS (textos.html - Requisito 6)
-   ========================================================================== */
+    /* TEXTO ANCORA     */
+
 .artigo-secao {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -353,63 +345,10 @@ td {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   8. RESPONSIVIDADE MOBILE (@media queries)
-   ========================================================================== */
-@media (max-width: 700px) {
-    .container {
-        padding: 20px;
-    }
+/* BOAS VINDAS */
 
-    .container h2 {
-        font-size: 25px;
-    }
-
-    .container h3 {
-        font-size: 20px;
-    }
-
-    /* Ajustes da Empresa no celular */
-    .container ol li {
-        padding: 18px 15px 18px 60px;
-    }
-
-    .container ol li::before {
-        left: 15px;
-    }
-
-    /* Ajustes dos Carros e Galeria no celular */
-    .carro {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .carro-imagem {
-        width: 100%;
-    }
-
-    .carro-imagem img {
-        height: 220px;
-    }
-
-    .galeria,
-    .grid-galeria {
-        grid-template-columns: 1fr;
-    }
-
-    /* Ajustes do Menu no celular */
-    nav a {
-        float: none;
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-/* =========================================
-   ESTILIZAÇÃO DO BOTÃO DE BOAS-VINDAS
-   ========================================= */
 .btn-destaque {
-    background-color: #d32f2f; /* Vermelho esportivo da marca */
+    background-color: #d32f2f; 
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
@@ -420,22 +359,21 @@ td {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Sombra padrão */
-    transition: all 0.3s ease-in-out; /* Deixa o movimento suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
 }
 
-/* Efeito ao passar o mouse (Hover) */
+/* Efeito ao passar o mouse */
 .btn-destaque:hover {
-    background-color: #111111; /* Fica escuro */
-    color: #d32f2f; /* O texto fica vermelho */
-    border: 2px solid #d32f2f; /* Ganha uma borda vermelha */
-    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); /* Sombra vermelha brilhante */
-    transform: translateY(-3px); /* Faz o botão dar uma leve "flutuada" para cima */
+    background-color: #111111; 
+    color: #d32f2f; 
+    border: 2px solid #d32f2f; 
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); 
+    transform: translateY(-3px); 
 }
 
-/* Efeito ao clicar (Active) */
+
 .btn-destaque:active {
-    transform: translateY(1px); /* O botão "afunda" quando clicado */
+    transform: translateY(1px); 
     box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
 }
 
@@ -496,4 +434,3 @@ td {
     line-height: 1.8;
     font-weight: 300;
 }
-
