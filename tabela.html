@@ -18,126 +18,132 @@
     <div class="container">
         <h2>Comparativo Técnico de Veículos</h2>
         <table>
-            <!-- Cabeçalho -->
-            <tr style="background-color: #d32f2f; color: white;">
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Motor</th>
-                <th>0-100 km</th>
-                <th>Preço</th>
-            </tr>
-            <!-- Porsche 1  -->
+            <!-- LINHA 1 (CABEÇALHO - 5 células) -->
             <tr>
-                <td rowspan="3" style="background-color: #fca5a5;">Porsche</td> 
-                <td style="background-color: #fef08a;">911 Carrera</td>
-                <td style="background-color: #bbf7d0;">3.0 Boxer</td>
-                <td style="background-color: #bfdbfe;">4.2s</td>
-                <td style="background-color: #e9d5ff;">R$ 900.000</td>
-            </tr>
-            <!-- Porsche 2 -->
-            <tr>
-                <td style="background-color: #fde047;">GT3 RS</td>
-                <td style="background-color: #86efac;">4.0 Boxer V6</td>
-                <td colspan="2" style="background-color: #fed7aa;">Consultar Concessionária</td> 
+                <th style="background-color: #aa0000; color: white;">Categoria / Marca</th>
+                <th style="background-color: #bb0000; color: white;">Modelo</th>
+                <th style="background-color: #cc0000; color: white;">Motor</th>
+                <th style="background-color: #dd0000; color: white;">0-100 km/h</th>
+                <th style="background-color: #ee0000; color: white;">Preço</th>
             </tr>
             
-            <!--  Porsche 3  -->
+            <!-- LINHA 2 (Porsche Taycan - Abre ROWSPAN 1 e COLSPAN 1) -->
             <tr>
-                <td style="background-color: #fef9c3;">Taycan</td>
-                <td colspan="3" style="background-color: #99f6e4;">Elétrico - Especificações Variáveis</td> 
+                <td rowspan="2" style="background-color: #ffcccc;">Porsche</td>
+                <td style="background-color: #ffe6cc;">Taycan</td>
+                <td colspan="2" style="background-color: #ffffcc;">Elétrico de Alta Performance</td>
+                <td style="background-color: #e6ffcc;">R$ 410.000</td>
             </tr>
             
-            <!--  Ferrari 1  -->
+            <!-- LINHA 3 (Porsche 911) -->
             <tr>
-                <td rowspan="2" style="background-color: #fda4af;">Ferrari</td> 
-                <td style="background-color: #fecdd3;">458 Speciale</td>
-                <td rowspan="2" style="background-color: #a7f3d0;">V8 Aspirado</td> 
-                <td style="background-color: #bae6fd;">3.0s</td>
-                <td style="background-color: #e879f9;">R$ 3.5M</td>
+                <td style="background-color: #ccffcc;">911 GT3</td>
+                <td style="background-color: #ccffe6;">4.0 Boxer V6</td>
+                <td style="background-color: #ccffff;">3.2s</td>
+                <td style="background-color: #cce6ff;">R$ 500.000</td>
             </tr>
             
-            <!--  Ferrari 2 -->
+            <!-- LINHA 4 (Ferrari) -->
             <tr>
-                <td style="background-color: #ffe4e6;">F8 Tributo</td>
-                <td style="background-color: #7dd3fc;">2.9s</td>
-                <td style="background-color: #d946ef;">R$ 4.0M</td>
+                <td style="background-color: #ccccff;">Ferrari</td>
+                <td style="background-color: #e6ccff;">Tributo</td>
+                <td style="background-color: #ffccff;">V8 Turbo</td>
+                <td style="background-color: #ffcce6;">2.9s</td>
+                <td style="background-color: #ffb3b3;">R$ 600.000</td>
             </tr>
             
-            <!--  BMW 1  -->
+            <!-- LINHA 5 (BMW) -->
             <tr>
-                <td rowspan="2" style="background-color: #f9a8d4;">BMW</td> 
-                <td style="background-color: #fbcfe8;">M2</td>
-                <td style="background-color: #6ee7b7;">3.0 TwinPower</td>
-                <td style="background-color: #38bdf8;">4.1s</td>
-                <td style="background-color: #c084fc;">R$ 620.000</td>
+                <td style="background-color: #ffd9b3;">BMW</td>
+                <td style="background-color: #ffffb3;">M2</td>
+                <td style="background-color: #d9ffb3;">3.0 TwinPower</td>
+                <td style="background-color: #b3ffb3;">4.1s</td>
+                <td style="background-color: #b3ffd9;">R$ 620.000</td>
             </tr>
             
-            <!--  BMW 2 -->
+            <!-- LINHA 6 (Mercedes - Abre COLSPAN 2) -->
             <tr>
-                <td colspan="4" style="background-color: #fdf2f8;">Outros modelos em breve...</td> 
+                <td style="background-color: #b3ffff;">Mercedes</td>
+                <td style="background-color: #b3d9ff;">AMG GT Coupé</td>
+                <td style="background-color: #b3b3ff;">V8 Biturbo</td>
+                <td colspan="2" style="background-color: #d9b3ff;">R$ 1.735.900 (Lançamento)</td>
             </tr>
             
-            <!--  Audi -->
+            <!-- LINHA 7 (Maserati) -->
             <tr>
-                <td style="background-color: #ffcccb;">Audi</td>
-                <td style="background-color: #ffe4e1;">RS 3</td>
-                <td style="background-color: #fafad2;">2.5 TFSI</td>
-                <td style="background-color: #e0ffff;">3.8s</td>
-                <td style="background-color: #f08080;">R$ 659.990</td>
+                <td style="background-color: #ffb3ff;">Maserati</td>
+                <td style="background-color: #ffb3d9;">Grecale Trofeo</td>
+                <td style="background-color: #ff9999;">V6 Nettuno</td>
+                <td style="background-color: #ffcc99;">3.8s</td>
+                <td style="background-color: #ffff99;">R$ 1.100.000</td>
             </tr>
-
-            <!-- Mercedes -->
+            
+            <!-- LINHA 8 (Honda Type R - Abre ROWSPAN 2) -->
             <tr>
-                <td style="background-color: #dda0dd;">Mercedes</td>
-                <td style="background-color: #b0e0e6;">AMG GT Coupé</td>
-                <td style="background-color: #98fb98;">V8 Biturbo</td>
-                <td style="background-color: #f0e68c;">3.2s</td>
-                <td style="background-color: #ffb6c1;">R$ 1.735.900</td>
+                <td rowspan="2" style="background-color: #ccff99;">Hatch Esportivo</td>
+                <td style="background-color: #99ff99;">Honda Civic Type R</td>
+                <td style="background-color: #99ffcc;">2.0 Turbo</td>
+                <td style="background-color: #99ffff;">5.4s</td>
+                <td style="background-color: #99ccff;">R$ 429.900</td>
             </tr>
-
-            <!--  Honda -->
+            
+            <!-- LINHA 9 (Audi RS 3) -->
             <tr>
-                <td style="background-color: #fffacd;">Honda</td>
-                <td style="background-color: #add8e6;">Civic Type R</td>
-                <td style="background-color: #f5deb3;">2.0 Turbo</td>
-                <td style="background-color: #d3d3d3;">5.4s</td>
-                <td style="background-color: #ffdab9;">R$ 429.900</td>
+                <td style="background-color: #9999ff;">Audi RS 3</td>
+                <td style="background-color: #cc99ff;">2.5 TFSI</td>
+                <td style="background-color: #ff99ff;">3.8s</td>
+                <td style="background-color: #ff99cc;">R$ 659.990</td>
             </tr>
-
-            <!-- Maserati -->
+            
+            <!-- LINHA 10 (Fiat Palio - Abre ROWSPAN 3) -->
             <tr>
-                <td style="background-color: #e6e6fa;">Maserati</td>
-                <td style="background-color: #ffe4b5;">Grecale Trofeo</td>
-                <td style="background-color: #ffebcd;">V6 Nettuno</td>
-                <td style="background-color: #7fffd4;">3.8s</td>
-                <td style="background-color: #f5f5dc;">R$ 1.100.000</td>
+                <td rowspan="3" style="background-color: #ff8080;">Populares 1.0</td>
+                <td style="background-color: #ffbf80;">Fiat Palio Attractive</td>
+                <td style="background-color: #ffff80;">1.0 Flex</td>
+                <td style="background-color: #bfff80;">14.5s</td>
+                <td style="background-color: #80ff80;">R$ 35.000</td>
             </tr>
-
-            <!--  Lifan -->
+            
+            <!-- LINHA 11 (Ford Ka - Abre COLSPAN 3) -->
             <tr>
-                <td style="background-color: #d8bfd8;">Lifan</td>
-                <td style="background-color: #ffefd5;">620</td>
-                <td style="background-color: #f0fff0;">1.6 Talent</td>
-                <td style="background-color: #fdf5e6;">13.5s</td>
-                <td style="background-color: #fff0f5;">R$ 22.000</td>
+                <td style="background-color: #80ffbf;">Ford Ka</td>
+                <td style="background-color: #80ffff;">1.0 MPI 8V</td>
+                <td colspan="2" style="background-color: #80bfff;">R$ 22.900 - Econômico</td>
             </tr>
-
-            <!-- Ford -->
+            
+            <!-- LINHA 12 (Peugeot 206) -->
             <tr>
-                <td style="background-color: #faf0e6;">Ford</td>
-                <td style="background-color: #eee8aa;">Ka</td>
-                <td style="background-color: #f8f8ff;">1.0 MPI 8V</td>
-                <td style="background-color: #f0ffff;">14.8s</td>
-                <td style="background-color: #f5fffa;">R$ 22.900</td>
+                <td style="background-color: #8080ff;">Peugeot 206 Presence</td>
+                <td style="background-color: #bf80ff;">1.4 Flex</td>
+                <td style="background-color: #ff80ff;">13.0s</td>
+                <td style="background-color: #ff80bf;">R$ 16.800</td>
             </tr>
-
-            <!-- Encerramento  -->
+            
+            <!-- LINHA 13 (Renault Clio - Abre ROWSPAN 4 E COLSPAN 4) -->
             <tr>
-                <td colspan="5" style="background-color: #a78bfa; color: white;">MAIS VEÍCULOS NO FUTURO</td>
+                <td rowspan="3" style="background-color: #f2a8a8;">Usados Diversos</td>
+                <td style="background-color: #f2cda8;">Renault Clio</td>
+                <td colspan="3" style="background-color: #f2f2a8;">74cv de potência - R$ 16.800</td>
+            </tr>
+            
+            <!-- LINHA 14 (VW Golf) -->
+            <tr>
+                <td style="background-color: #cdf2a8;">VW Golf Comfort</td>
+                <td style="background-color: #a8f2a8;">1.4 TSI</td>
+                <td style="background-color: #a8f2cd;">8.5s</td>
+                <td style="background-color: #a8f2f2;">R$ 16.800</td>
+            </tr>
+            
+            <!-- LINHA 15 (Lifan 620) -->
+            <tr>
+                <td style="background-color: #a8cdf2;">Lifan 620 Talent</td>
+                <td style="background-color: #a8a8f2;">1.6 Gasolina</td>
+                <td style="background-color: #cda8f2;">13.5s</td>
+                <td style="background-color: #f2a8f2;">R$ 22.000</td>
             </tr>
         </table>
     </div>
-    
+
     <footer>
         <p>Curso: Ciência da Computação - UniCEUB | Disciplina: Desenvolvimento Web | Turma: B</p>
         <p>Integrantes do Grupo 6: Victor Barcelos, Gabriel Henrique, Lucas Werneck, Victor Silva</p>
