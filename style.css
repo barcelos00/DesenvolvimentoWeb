@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ÍNDICE DO CSS - PROJETO SOFTCAR
    
    1. Geral e Base (Body, Container, Tipografia)
@@ -12,18 +13,26 @@
    10. Responsividade (Mobile) */
 
 /* 1. GERAL E BASE */
+=======
+/* GERAL */
+>>>>>>> resgate-colegas
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
     background-image: url('imagens/fundo.jpg');
+<<<<<<< HEAD
+=======
+/* PLANO DE FUNDO */
+>>>>>>> resgate-colegas
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 .container {
     padding: 30px;
     max-width: 1200px;
@@ -63,6 +72,8 @@ body {
 }
 
 /* 2. CABEÇALHO E RODAPÉ */
+=======
+>>>>>>> resgate-colegas
 .logo {
     display: flex;
     align-items: center;
@@ -80,6 +91,50 @@ body {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+<<<<<<< HEAD
+=======
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 80vh;
+}
+
+.container h2 {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+
+.container h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 38px;
+    text-decoration: underline;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+
+.container h1:hover {
+    color: #cb1010;
+    transition: 0.3s;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container h3 {
+    color: white;
+}
+
+/* FOOTER E NAVEGAÇÃO*/
+
+>>>>>>> resgate-colegas
 nav {
     background-color: #d32f2f;
     overflow: hidden;
@@ -94,11 +149,18 @@ nav a {
     padding: 16px 20px;
     text-decoration: none;
     font-weight: bold;
+<<<<<<< HEAD
     transition: 0.3s;
+=======
+>>>>>>> resgate-colegas
 }
 
 nav a:hover {
     background-color: #111;
+<<<<<<< HEAD
+=======
+    transition: 0.3s;
+>>>>>>> resgate-colegas
 }
 
 footer {
@@ -110,6 +172,7 @@ footer {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
 /* 3. COMPONENTES REUTILIZÁVEIS */
 /* Botão de Destaque */
 .btn-destaque {
@@ -197,6 +260,10 @@ footer {
 }
 
 /* 4. PÁGINA INICIAL (Catálogo e Patrocinadores)  */
+=======
+/* PAGINA INICCIAL */
+
+>>>>>>> resgate-colegas
 .produtos {
     margin-top: 50px;
 }
@@ -250,7 +317,11 @@ footer {
     padding-bottom: 0;
 }
 
+<<<<<<< HEAD
 .carro-informacoes > p {
+=======
+.carro-informacoes>p {
+>>>>>>> resgate-colegas
     color: #ddd;
     line-height: 1.6;
 }
@@ -297,6 +368,10 @@ footer {
     border: 1px solid #d32f2f;
 }
 
+<<<<<<< HEAD
+=======
+/* Patrocinadores  */
+>>>>>>> resgate-colegas
 .sponsors {
     display: flex;
     justify-content: space-around;
@@ -315,8 +390,14 @@ footer {
     color: #d32f2f;
 }
 
+<<<<<<< HEAD
 /* 5. PÁGINA EMPRESA / BRIEFING */
 .empresa > p:first-of-type {
+=======
+/* EMPRESA/ DOCS */
+
+.empresa>p:first-of-type {
+>>>>>>> resgate-colegas
     background-color: rgba(255, 255, 255, 0.06);
     border-left: 4px solid #d32f2f;
     padding: 18px 20px;
@@ -378,12 +459,20 @@ footer {
     margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .empresa > p:last-child {
+=======
+.empresa>p:last-child {
+>>>>>>> resgate-colegas
     text-align: center;
     margin-top: 35px;
 }
 
+<<<<<<< HEAD
 .empresa > p:last-child a {
+=======
+.empresa>p:last-child a {
+>>>>>>> resgate-colegas
     display: inline-block;
     background-color: #d32f2f;
     color: white;
@@ -394,12 +483,21 @@ footer {
     transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .empresa > p:last-child a:hover {
+=======
+.empresa>p:last-child a:hover {
+>>>>>>> resgate-colegas
     background-color: #111;
     border: 1px solid #d32f2f;
 }
 
+<<<<<<< HEAD
 /* 6. PÁGINA GALERIA */
+=======
+/* GALERIA */
+
+>>>>>>> resgate-colegas
 .galeria,
 .grid-galeria {
     display: grid;
@@ -423,7 +521,12 @@ footer {
     transform: scale(1.05);
 }
 
+<<<<<<< HEAD
 /* 7. PÁGINA DE TABELAS*/
+=======
+/* TABELAS */
+
+>>>>>>> resgate-colegas
 table {
     width: 100%;
     border-collapse: collapse;
@@ -431,6 +534,7 @@ table {
     color: #000;
 }
 
+<<<<<<< HEAD
 th, td {
     border: 2px solid #333;
     padding: 10px;
@@ -445,11 +549,16 @@ table {
 }
 
 th, td {
+=======
+th,
+td {
+>>>>>>> resgate-colegas
     border: 2px solid #333;
     padding: 10px;
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* Linha 1 - Cabeçalho */
 .bg-row1-1 { background-color: #aa0000; color: white; }
 .bg-row1-2 { background-color: #bb0000; color: white; }
@@ -545,6 +654,10 @@ th, td {
 .bg-row15-4 { background-color: #f2a8f2; }
 
 /* 8. PÁGINA ARTIGOS (Textos e Âncoras)*/
+=======
+    /* TEXTO ANCORA     */
+
+>>>>>>> resgate-colegas
 .artigo-secao {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -558,6 +671,7 @@ th, td {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 .artigo-secao .artigo-texto {
     color: #d32f2f;
     font-weight: bold;
@@ -580,3 +694,94 @@ th, td {
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
+=======
+/* BOAS VINDAS */
+
+.btn-destaque {
+    background-color: #d32f2f; 
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 15px 35px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+}
+
+/* Efeito ao passar o mouse */
+.btn-destaque:hover {
+    background-color: #111111; 
+    color: #d32f2f; 
+    border: 2px solid #d32f2f; 
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); 
+    transform: translateY(-3px); 
+}
+
+
+.btn-destaque:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #d32f2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: #222222;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.link-item:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+    transform: translateX(10px);
+    border-left: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+.artigo-secao .artigo-texto {
+    color:#d32f2f;
+    font-weight: bold;
+}
+
+.citacao {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px 35px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid #d32f2f;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.citacao blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 22px;
+    font-style: italic;
+    color: #f0f0f0;
+    line-height: 1.8;
+    font-weight: 300;
+}
+>>>>>>> resgate-colegas
