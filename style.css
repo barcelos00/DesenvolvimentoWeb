@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* ÍNDICE DO CSS - PROJETO SOFTCAR
+/*    ÍNDICE DO CSS - PROJETO SOFTCAR (TEMA DARK TECH - ROXO E AZUL CELESTE)
    
    1. Geral e Base (Body, Container, Tipografia)
    2. Cabeçalho e Rodapé (Nav, Footer, Logo)
@@ -7,38 +6,30 @@
    4. Página Inicial (Catálogo de Carros, Patrocinadores)
    5. Página Empresa / Briefing
    6. Página Galeria
-   7. Página de Tabelas
+   7. Página de Tabelas (Cores Únicas Otimizadas)
    8. Página Artigos (Textos e Âncoras)
    9. Página de Documentos (Wireframes)
-   10. Responsividade (Mobile) */
+   10. Responsividade (Mobile)
+    */
 
-/* 1. GERAL E BASE */
-=======
-/* GERAL */
->>>>>>> resgate-colegas
+/*    1. GERAL E BASE*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    background-image: url('imagens/fundo.jpg');
-<<<<<<< HEAD
-=======
-/* PLANO DE FUNDO */
->>>>>>> resgate-colegas
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #ffffff;
+    background-color: #121212; /* Fundo escuro para não cansar a vista */
+    color: #e0e0e0; /* Texto em cinza clarinho (gelo) para conforto visual */
 }
 
-<<<<<<< HEAD
 .container {
     padding: 30px;
     max-width: 1200px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    margin: 30px auto;
+    background-color: rgba(24, 24, 26, 0.95); /* Fundo dos painéis levemente mais claro que o body */
     min-height: 80vh;
+    border-radius: 12px;
+    border-top: 4px solid #6e2066; /* Linha Roxa no topo do painel */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Tipografia (Títulos) */
@@ -49,14 +40,15 @@ body {
     text-decoration: underline;
     font-family: 'Montserrat', 'Arial Black', sans-serif;
     transition: 0.3s;
+    color: #ffffff;
 }
 
 .container h1:hover {
-    color: #cb1010;
+    color: #0ea5e9; /* Azul Celeste ao passar o mouse */
 }
 
 .container h2 {
-    color: #d32f2f;
+    color: #0ea5e9; /* Azul Celeste nos Títulos */
     text-align: center;
     font-size: 32px;
     margin-bottom: 10px;
@@ -71,9 +63,7 @@ body {
     color: white;
 }
 
-/* 2. CABEÇALHO E RODAPÉ */
-=======
->>>>>>> resgate-colegas
+/*    2. CABEÇALHO E RODAPÉ  */
 .logo {
     display: flex;
     align-items: center;
@@ -88,102 +78,54 @@ body {
     max-width: 80%;
     height: auto;
     object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
-.container {
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    min-height: 80vh;
-}
-
-.container h2 {
-    color: #d32f2f;
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: underline;
-    font-style: italic;
-    font-family: 'Montserrat', 'Arial Black', sans-serif;
-}
-
-.container h1 {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 38px;
-    text-decoration: underline;
-    font-family: 'Montserrat', 'Arial Black', sans-serif;
-}
-
-.container h1:hover {
-    color: #cb1010;
-    transition: 0.3s;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.container h3 {
-    color: white;
-}
-
-/* FOOTER E NAVEGAÇÃO*/
-
->>>>>>> resgate-colegas
 nav {
-    background-color: #d32f2f;
+    background-color: #4a1545; /* Roxo Escuro */
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #0ea5e9; /* Detalhe em Azul Celeste */
 }
 
 nav a {
     float: left;
     display: block;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 16px 20px;
     text-decoration: none;
     font-weight: bold;
-<<<<<<< HEAD
+    letter-spacing: 0.5px;
     transition: 0.3s;
-=======
->>>>>>> resgate-colegas
 }
 
 nav a:hover {
-    background-color: #111;
-<<<<<<< HEAD
-=======
-    transition: 0.3s;
->>>>>>> resgate-colegas
+    background-color: #6e2066; /* Roxo mais claro no Hover */
+    color: #0ea5e9; /* Letra azul no Hover */
 }
 
 footer {
-    background-color: #111;
-    color: #aaa;
+    background-color: #0a0a0a;
+    color: #888888;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 0.9em;
-    margin-top: 20px;
+    margin-top: 30px;
+    border-top: 2px solid #6e2066;
 }
 
-<<<<<<< HEAD
-/* 3. COMPONENTES REUTILIZÁVEIS */
+/*    3. COMPONENTES REUTILIZÁVEIS   */
 /* Botão de Destaque */
 .btn-destaque {
-    background-color: #d32f2f; 
-    color: #ffffff;
+    background-color: #0ea5e9; /* Azul Celeste */
+    color: #ffffff; /* Texto branco */
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     padding: 15px 35px;
-    border: 2px solid transparent;
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;
@@ -192,36 +134,34 @@ footer {
 }
 
 .btn-destaque:hover {
-    background-color: #111111; 
-    color: #d32f2f; 
-    border: 2px solid #d32f2f; 
-    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); 
+    background-color: #6e2066; /* Fica Roxo */
+    color: #ffffff; /* Texto branco */
+    box-shadow: 0 8px 15px rgba(110, 32, 102, 0.5); /* Brilho roxo */
     transform: translateY(-3px); 
 }
 
 .btn-destaque:active {
     transform: translateY(1px); 
-    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
 }
 
-/* Lista de Links Externos */
+/* Lista de Links Externos (Página de 10 sites) */
 .links {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-color: #1a1a1a;
+    background-color: #1e1e1e;
     padding: 25px;
     border-radius: 8px;
-    border-left: 5px solid #d32f2f;
+    border-left: 5px solid #6e2066; /* Roxo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .link-item {
     display: block;
-    color: #ffffff;
+    color: #e0e0e0;
     text-decoration: none;
     padding: 12px 18px;
-    background-color: #222222;
+    background-color: #121212;
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -229,11 +169,11 @@ footer {
 }
 
 .link-item:hover {
-    background-color: #d32f2f;
-    color: #ffffff;
+    background-color: #6e2066; /* Roxo */
+    color: #0ea5e9; /* Azul Celeste */
     transform: translateX(10px);
-    border-left: 3px solid #ffffff;
-    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+    border-left: 3px solid #0ea5e9;
+    box-shadow: 0 4px 12px rgba(110, 32, 102, 0.4);
 }
 
 /* Citações */
@@ -241,11 +181,10 @@ footer {
     max-width: 800px;
     margin: 40px auto;
     padding: 25px 35px;
-    background-color: rgba(20, 20, 20, 0.8);
-    border-left: 4px solid #d32f2f;
+    background-color: rgba(110, 32, 102, 0.1); /* Fundo roxo bem suave */
+    border-left: 4px solid #0ea5e9; /* Borda Azul Celeste */
     border-radius: 6px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .citacao blockquote {
@@ -259,28 +198,17 @@ footer {
     font-weight: 300;
 }
 
-/* 4. PÁGINA INICIAL (Catálogo e Patrocinadores)  */
-=======
-/* PAGINA INICCIAL */
-
->>>>>>> resgate-colegas
-.produtos {
-    margin-top: 50px;
-}
-
-.descricao-produtos {
-    text-align: center;
-    color: #ccc;
-    margin-bottom: 30px;
-}
+/*    4. PÁGINA INICIAL (Catálogo e Patrocinadores)  */
+.produtos { margin-top: 50px; }
+.descricao-produtos { text-align: center; color: #aaaaaa; margin-bottom: 30px; }
 
 .carro {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: rgba(20, 20, 20, 0.90);
+    background-color: #1e1e1e; /* Card escuro */
     border: 1px solid #333;
-    border-left: 4px solid #d32f2f;
+    border-left: 4px solid #6e2066; /* Borda Roxa */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
@@ -289,52 +217,30 @@ footer {
 
 .carro:hover {
     transform: translateX(5px);
-    border-color: #d32f2f;
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
+    border-color: #0ea5e9; /* Borda Azul no Hover */
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15);
 }
 
-.carro-imagem {
-    width: 45%;
-}
+.carro-imagem { width: 45%; }
 
 .carro-imagem img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+    width: 100%; height: 280px; object-fit: cover;
     border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 
-.carro-informacoes {
-    flex: 1;
-}
+.carro-informacoes { flex: 1; }
 
 .carro-informacoes h3 {
-    color: #d32f2f;
+    color: #0ea5e9; /* Título Azul Celeste */
     font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    border-bottom: none;
-    padding-bottom: 0;
+    margin-top: 0; margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-.carro-informacoes > p {
-=======
-.carro-informacoes>p {
->>>>>>> resgate-colegas
-    color: #ddd;
-    line-height: 1.6;
-}
+.carro-informacoes > p { color: #cccccc; line-height: 1.6; }
 
-.disponibilidade .dispo {
-    color: #4caf50;
-    font-weight: bold;
-}
-
-.disponibilidade .indisponivel {
-    color: #dc0a0a;
-    font-weight: bold;
-}
+.disponibilidade .dispo { color: #4caf50; font-weight: bold; }
+.disponibilidade .indisponivel { color: #ef5350; font-weight: bold; }
 
 .carro-dados {
     margin-top: 20px;
@@ -342,21 +248,16 @@ footer {
     padding-top: 10px;
 }
 
-.carro-dados p {
-    margin: 8px 0;
-    color: #ccc;
-}
-
-.carro-dados strong {
-    color: #fff;
-}
+.carro-dados p { margin: 8px 0; color: #aaaaaa; }
+.carro-dados strong { color: #ffffff; }
 
 .botao-carro {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 22px;
-    background-color: #d32f2f;
-    color: white;
+    padding: 10px 22px;
+    background-color: transparent;
+    color: #0ea5e9;
+    border: 1px solid #0ea5e9;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -364,59 +265,50 @@ footer {
 }
 
 .botao-carro:hover {
-    background-color: #111;
-    border: 1px solid #d32f2f;
+    background-color: #0ea5e9;
+    color: #ffffff;
 }
 
-<<<<<<< HEAD
-=======
-/* Patrocinadores  */
->>>>>>> resgate-colegas
 .sponsors {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
-    background: #fff;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #333;
 }
 
 .sponsors img {
     max-width: 150px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
-.sponsors b {
-    color: #d32f2f;
+.sponsors img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
-<<<<<<< HEAD
-/* 5. PÁGINA EMPRESA / BRIEFING */
+/*    5. PÁGINA EMPRESA / BRIEFING  */
 .empresa > p:first-of-type {
-=======
-/* EMPRESA/ DOCS */
-
-.empresa>p:first-of-type {
->>>>>>> resgate-colegas
-    background-color: rgba(255, 255, 255, 0.06);
-    border-left: 4px solid #d32f2f;
+    background-color: rgba(110, 32, 102, 0.1);
+    border-left: 4px solid #0ea5e9;
     padding: 18px 20px;
     line-height: 1.7;
     border-radius: 5px;
     margin-bottom: 30px;
 }
 
-.empresa ol {
-    padding-left: 0;
-    list-style: none;
-    counter-reset: briefing;
-}
+.empresa ol { padding-left: 0; list-style: none; counter-reset: briefing; }
 
 .empresa ol li {
     counter-increment: briefing;
-    background-color: rgba(20, 20, 20, 0.90);
+    background-color: #1e1e1e;
     border: 1px solid #333;
-    border-left: 4px solid #d32f2f;
+    border-left: 4px solid #6e2066; /* Borda Roxa */
     margin-bottom: 15px;
     padding: 20px 25px 20px 70px;
     border-radius: 6px;
@@ -427,54 +319,27 @@ footer {
 .empresa ol li::before {
     content: counter(briefing);
     position: absolute;
-    left: 20px;
-    top: 18px;
-    width: 35px;
-    height: 35px;
-    background-color: #d32f2f;
+    left: 20px; top: 18px; width: 35px; height: 35px;
+    background-color: #6e2066; /* Bolinha Roxa */
     color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 16px;
 }
 
 .empresa ol li:hover {
     transform: translateX(5px);
-    border-color: #d32f2f;
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
+    border-color: #0ea5e9;
 }
 
-.empresa ol li strong {
-    color: #d32f2f;
-    font-size: 17px;
-}
+.empresa ol li strong { color: #0ea5e9; font-size: 17px; }
+.empresa ol li p { color: #cccccc; line-height: 1.7; margin-top: 10px; margin-bottom: 0; }
 
-.empresa ol li p {
-    color: #dddddd;
-    line-height: 1.7;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
+.empresa > p:last-child { text-align: center; margin-top: 35px; }
 
-<<<<<<< HEAD
-.empresa > p:last-child {
-=======
-.empresa>p:last-child {
->>>>>>> resgate-colegas
-    text-align: center;
-    margin-top: 35px;
-}
-
-<<<<<<< HEAD
 .empresa > p:last-child a {
-=======
-.empresa>p:last-child a {
->>>>>>> resgate-colegas
     display: inline-block;
-    background-color: #d32f2f;
+    background-color: #6e2066;
     color: white;
     text-decoration: none;
     padding: 12px 25px;
@@ -483,305 +348,67 @@ footer {
     transition: 0.3s;
 }
 
-<<<<<<< HEAD
-.empresa > p:last-child a:hover {
-=======
-.empresa>p:last-child a:hover {
->>>>>>> resgate-colegas
-    background-color: #111;
-    border: 1px solid #d32f2f;
-}
+.empresa > p:last-child a:hover { background-color: #0ea5e9; color: #ffffff; }
 
-<<<<<<< HEAD
-/* 6. PÁGINA GALERIA */
-=======
-/* GALERIA */
-
->>>>>>> resgate-colegas
-.galeria,
-.grid-galeria {
+/*    6. PÁGINA GALERIA  */
+.galeria, .grid-galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
 
-.galeria img,
-.grid-galeria img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.galeria img, .grid-galeria img {
+    width: 100%; height: 250px; object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     transition: transform 0.3s;
 }
 
-.galeria img:hover,
-.grid-galeria img:hover {
-    transform: scale(1.05);
-}
+.galeria img:hover, .grid-galeria img:hover { transform: scale(1.05); }
 
-<<<<<<< HEAD
-/* 7. PÁGINA DE TABELAS*/
-=======
-/* TABELAS */
+/*    7. PÁGINA DE TABELAS (Tons Ultra Escuros para Conforto) */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0e0; }
 
->>>>>>> resgate-colegas
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    color: #000;
-}
+/* Cabeçalho - Degradê de Roxos Escuros */
+.bg-row1-1 {background:#3d1438;} .bg-row1-2 {background:#471742;} .bg-row1-3 {background:#521a4c;} .bg-row1-4 {background:#5c1d56;} .bg-row1-5 {background:#662060;}
 
-<<<<<<< HEAD
-th, td {
-    border: 2px solid #333;
-    padding: 10px;
-    text-align: center;
-}
-/* 7. PÁGINA DE TABELAS (CORES ÚNICAS) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    color: #000;
-}
+/* Corpo da tabela com tons super escuros */
+.bg-row2-1 {background:#181818;} .bg-row2-2 {background:#1a1a1c;} .bg-row2-3 {background:#1c1c1f;} .bg-row2-4 {background:#1e1e21;}
+.bg-row3-1 {background:#202024;} .bg-row3-2 {background:#222226;} .bg-row3-3 {background:#242429;} .bg-row3-4 {background:#26262b;}
+.bg-row4-1 {background:#29292e;} .bg-row4-2 {background:#2b2b31;} .bg-row4-3 {background:#2d2d33;} .bg-row4-4 {background:#303036;} .bg-row4-5 {background:#323238;}
+.bg-row5-1 {background:#181a18;} .bg-row5-2 {background:#1a1c1a;} .bg-row5-3 {background:#1c1f1c;} .bg-row5-4 {background:#1e211e;} .bg-row5-5 {background:#202420;}
+.bg-row6-1 {background:#222622;} .bg-row6-2 {background:#242924;} .bg-row6-3 {background:#262b26;} .bg-row6-4 {background:#292e29;}
+.bg-row7-1 {background:#2b312b;} .bg-row7-2 {background:#2d332d;} .bg-row7-3 {background:#303630;} .bg-row7-4 {background:#323832;} .bg-row7-5 {background:#343b34;}
+.bg-row8-1 {background:#18181a;} .bg-row8-2 {background:#1a1a1f;} .bg-row8-3 {background:#1c1c24;} .bg-row8-4 {background:#1e1e29;} .bg-row8-5 {background:#20202e;}
+.bg-row9-1 {background:#222233;} .bg-row9-2 {background:#242438;} .bg-row9-3 {background:#26263d;} .bg-row9-4 {background:#292942;}
+.bg-row10-1{background:#2b2b47;} .bg-row10-2{background:#2d2d4c;} .bg-row10-3{background:#303052;} .bg-row10-4{background:#323257;} .bg-row10-5{background:#34345c;}
+.bg-row11-1{background:#1a1818;} .bg-row11-2{background:#1f1a1a;} .bg-row11-3{background:#241c1c;}
+.bg-row12-1{background:#291e1e;} .bg-row12-2{background:#2e2020;} .bg-row12-3{background:#332222;} .bg-row12-4{background:#382424;}
+.bg-row13-1{background:#3d2626;} .bg-row13-2{background:#422929;} .bg-row13-3{background:#472b2b;}
+.bg-row14-1{background:#181a1c;} .bg-row14-2{background:#1a1d1f;} .bg-row14-3{background:#1c1f24;} .bg-row14-4{background:#1e2229;}
+.bg-row15-1{background:#20252e;} .bg-row15-2{background:#222833;} .bg-row15-3{background:#242a38;} .bg-row15-4{background:#262d3d;}
 
-th, td {
-=======
-th,
-td {
->>>>>>> resgate-colegas
-    border: 2px solid #333;
-    padding: 10px;
-    text-align: center;
-}
-
-<<<<<<< HEAD
-/* Linha 1 - Cabeçalho */
-.bg-row1-1 { background-color: #aa0000; color: white; }
-.bg-row1-2 { background-color: #bb0000; color: white; }
-.bg-row1-3 { background-color: #cc0000; color: white; }
-.bg-row1-4 { background-color: #dd0000; color: white; }
-.bg-row1-5 { background-color: #ee0000; color: white; }
-
-/* Linha 2 - Porsche Taycan */
-.bg-row2-1 { background-color: #ffcccc; }
-.bg-row2-2 { background-color: #ffe6cc; }
-.bg-row2-3 { background-color: #ffffcc; }
-.bg-row2-4 { background-color: #e6ffcc; }
-
-/* Linha 3 - 911 GT3 */
-.bg-row3-1 { background-color: #ccffcc; }
-.bg-row3-2 { background-color: #ccffe6; }
-.bg-row3-3 { background-color: #ccffff; }
-.bg-row3-4 { background-color: #cce6ff; }
-
-/* Linha 4 - Ferrari */
-.bg-row4-1 { background-color: #ccccff; }
-.bg-row4-2 { background-color: #e6ccff; }
-.bg-row4-3 { background-color: #ffccff; }
-.bg-row4-4 { background-color: #ffcce6; }
-.bg-row4-5 { background-color: #ffb3b3; }
-
-/* Linha 5 - BMW */
-.bg-row5-1 { background-color: #ffd9b3; }
-.bg-row5-2 { background-color: #ffffb3; }
-.bg-row5-3 { background-color: #d9ffb3; }
-.bg-row5-4 { background-color: #b3ffb3; }
-.bg-row5-5 { background-color: #b3ffd9; }
-
-/* Linha 6 - Mercedes */
-.bg-row6-1 { background-color: #b3ffff; }
-.bg-row6-2 { background-color: #b3d9ff; }
-.bg-row6-3 { background-color: #b3b3ff; }
-.bg-row6-4 { background-color: #d9b3ff; }
-
-/* Linha 7 - Maserati */
-.bg-row7-1 { background-color: #ffb3ff; }
-.bg-row7-2 { background-color: #ffb3d9; }
-.bg-row7-3 { background-color: #ff9999; }
-.bg-row7-4 { background-color: #ffcc99; }
-.bg-row7-5 { background-color: #ffff99; }
-
-/* Linha 8 - Honda Type R */
-.bg-row8-1 { background-color: #ccff99; }
-.bg-row8-2 { background-color: #99ff99; }
-.bg-row8-3 { background-color: #99ffcc; }
-.bg-row8-4 { background-color: #99ffff; }
-.bg-row8-5 { background-color: #99ccff; }
-
-/* Linha 9 - Audi RS 3 */
-.bg-row9-1 { background-color: #9999ff; }
-.bg-row9-2 { background-color: #cc99ff; }
-.bg-row9-3 { background-color: #ff99ff; }
-.bg-row9-4 { background-color: #ff99cc; }
-
-/* Linha 10 - Fiat Palio */
-.bg-row10-1 { background-color: #ff8080; }
-.bg-row10-2 { background-color: #ffbf80; }
-.bg-row10-3 { background-color: #ffff80; }
-.bg-row10-4 { background-color: #bfff80; }
-.bg-row10-5 { background-color: #80ff80; }
-
-/* Linha 11 - Ford Ka */
-.bg-row11-1 { background-color: #80ffbf; }
-.bg-row11-2 { background-color: #80ffff; }
-.bg-row11-3 { background-color: #80bfff; }
-
-/* Linha 12 - Peugeot 206 */
-.bg-row12-1 { background-color: #8080ff; }
-.bg-row12-2 { background-color: #bf80ff; }
-.bg-row12-3 { background-color: #ff80ff; }
-.bg-row12-4 { background-color: #ff80bf; }
-
-/* Linha 13 - Renault Clio */
-.bg-row13-1 { background-color: #f2a8a8; }
-.bg-row13-2 { background-color: #f2cda8; }
-.bg-row13-3 { background-color: #f2f2a8; }
-
-/* Linha 14 - VW Golf */
-.bg-row14-1 { background-color: #cdf2a8; }
-.bg-row14-2 { background-color: #a8f2a8; }
-.bg-row14-3 { background-color: #a8f2cd; }
-.bg-row14-4 { background-color: #a8f2f2; }
-
-/* Linha 15 - Lifan 620 */
-.bg-row15-1 { background-color: #a8cdf2; }
-.bg-row15-2 { background-color: #a8a8f2; }
-.bg-row15-3 { background-color: #cda8f2; }
-.bg-row15-4 { background-color: #f2a8f2; }
-
-/* 8. PÁGINA ARTIGOS (Textos e Âncoras)*/
-=======
-    /* TEXTO ANCORA     */
-
->>>>>>> resgate-colegas
+/*    8. PÁGINA ARTIGOS (Textos e Âncoras) */
 .artigo-secao {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #444;
+    margin-top: 50px; margin-bottom: 50px; padding-bottom: 20px;
+    border-bottom: 1px solid #333;
 }
 
-.voltar-topo {
-    color: #d32f2f;
-    text-decoration: none;
-    font-weight: bold;
-}
+.voltar-topo { color: #0ea5e9; text-decoration: none; font-weight: bold; }
+.voltar-topo:hover { text-decoration: underline; color: #ffffff; }
 
-<<<<<<< HEAD
-.artigo-secao .artigo-texto {
-    color: #d32f2f;
-    font-weight: bold;
-}
+.artigo-secao .artigo-texto { color: #c48bc4; font-weight: bold; } 
 
-/* 9. PÁGINA DOCUMENTOS (Wireframes) */
-.wireframe-section {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.wireframe-section h3 {
-    color: #d32f2f;
-    margin-bottom: 15px;
-}
+/*    9. PÁGINA DOCUMENTOS (Wireframes) */
+.wireframe-section { text-align: center; margin-bottom: 60px; }
+.wireframe-section h3 { color: #0ea5e9; margin-bottom: 15px; }
 
 .wireframe-section img {
     max-width: 85%;
-    border: 2px solid #333;
+    border: 2px solid #6e2066; 
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
-}
-=======
-/* BOAS VINDAS */
-
-.btn-destaque {
-    background-color: #d32f2f; 
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 15px 35px;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
 }
 
-/* Efeito ao passar o mouse */
-.btn-destaque:hover {
-    background-color: #111111; 
-    color: #d32f2f; 
-    border: 2px solid #d32f2f; 
-    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); 
-    transform: translateY(-3px); 
-}
-
-
-.btn-destaque:active {
-    transform: translateY(1px); 
-    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
-}
-
-.links{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background-color: #1a1a1a;
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 5px solid #d32f2f;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.link-item {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 18px;
-    background-color: #222222;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
-}
-
-.link-item:hover {
-    background-color: #d32f2f;
-    color: #ffffff;
-    transform: translateX(10px);
-    border-left: 3px solid #ffffff;
-    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
-}
-
-.artigo-secao .artigo-texto {
-    color:#d32f2f;
-    font-weight: bold;
-}
-
-.citacao {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 25px 35px;
-    background-color: rgba(20, 20, 20, 0.8);
-    border-left: 4px solid #d32f2f;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.citacao blockquote {
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 22px;
-    font-style: italic;
-    color: #f0f0f0;
-    line-height: 1.8;
-    font-weight: 300;
-}
->>>>>>> resgate-colegas
