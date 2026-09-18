@@ -250,18 +250,24 @@ footer {
 
 .carro-dados p { margin: 8px 0; color: #aaaaaa; }
 .carro-dados strong { color: #ffffff; }
-
 .botao-carro {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;         /* Força os dois a terem exatamente a mesma largura */
+    height: 45px;         /* Força os dois a terem exatamente a mesma altura */
     margin-top: 15px;
-    padding: 10px 22px;
     background-color: transparent;
     color: #0ea5e9;
-    border: 1px solid #0ea5e9;
+    border: 2px solid #0ea5e9; /* Borda 2px para ficar bem visível como na sua imagem */
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 15px;      /* Padroniza o tamanho da fonte entre o botão e o link */
+    font-family: inherit; /* Força o <button> a usar a mesma fonte do resto do site */
+    cursor: pointer;      /* Coloca a "mãozinha" quando passar o mouse no <button> */
     transition: 0.3s;
+    box-sizing: border-box; /* Impede que a borda altere o tamanho final */
 }
 
 .botao-carro:hover {
