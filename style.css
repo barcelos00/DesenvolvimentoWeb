@@ -1,21 +1,89 @@
-/* style.css */
+/* ÍNDICE DO CSS - PROJETO SOFTCAR
+   
+   1. Geral e Base (Body, Container, Tipografia)
+   2. Cabeçalho e Rodapé (Nav, Footer, Logo)
+   3. Componentes Reutilizáveis (Botões, Links, Citações)
+   4. Página Inicial (Catálogo de Carros, Patrocinadores)
+   5. Página Empresa / Briefing
+   6. Página Galeria
+   7. Página de Tabelas
+   8. Página Artigos (Textos e Âncoras)
+   9. Página de Documentos (Wireframes)
+   10. Responsividade (Mobile) */
+
+/* 1. GERAL E BASE */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundo escuro padrão */
-    background-image: url('fundo.jpg'); /* Adicione uma imagem escura/tecnológica na pasta */
+    background-color: #121212;
+    background-image: url('imagens/fundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
 }
 
-/* Barra de Navegação */
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 80vh;
+}
+
+/* Tipografia (Títulos) */
+.container h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 38px;
+    text-decoration: underline;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    transition: 0.3s;
+}
+
+.container h1:hover {
+    color: #cb1010;
+}
+
+.container h2 {
+    color: #d32f2f;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+
+.container h3 {
+    color: white;
+}
+
+/* 2. CABEÇALHO E RODAPÉ */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    margin: 30px 0 20px 0;
+}
+
+.logo img {
+    display: block;
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 nav {
-    background-color: #d32f2f; /* Vermelho esportivo */
+    background-color: #d32f2f;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav a {
@@ -26,46 +94,214 @@ nav a {
     padding: 16px 20px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     background-color: #111;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* 3. COMPONENTES REUTILIZÁVEIS */
+/* Botão de Destaque */
+.btn-destaque {
+    background-color: #d32f2f; 
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 15px 35px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-destaque:hover {
+    background-color: #111111; 
+    color: #d32f2f; 
+    border: 2px solid #d32f2f; 
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); 
+    transform: translateY(-3px); 
+}
+
+.btn-destaque:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(211, 47, 47, 0.4);
+}
+
+/* Lista de Links Externos */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #d32f2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: #222222;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.link-item:hover {
+    background-color: #d32f2f;
+    color: #ffffff;
+    transform: translateX(10px);
+    border-left: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+/* Citações */
+.citacao {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px 35px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-left: 4px solid #d32f2f;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.citacao blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 22px;
+    font-style: italic;
+    color: #f0f0f0;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* 4. PÁGINA INICIAL (Catálogo e Patrocinadores)  */
+.produtos {
+    margin-top: 50px;
+}
+
+.descricao-produtos {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.carro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(20, 20, 20, 0.90);
+    border: 1px solid #333;
+    border-left: 4px solid #d32f2f;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
     transition: 0.3s;
 }
 
-.container {
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo translúcido para leitura */
-    min-height: 80vh;
+.carro:hover {
+    transform: translateX(5px);
+    border-color: #d32f2f;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
 }
 
-/* Galeria 3 colunas (Requisito 4) */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.carro-imagem {
+    width: 45%;
 }
 
-.galeria img {
+.carro-imagem img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
+    border-radius: 6px;
+}
+
+.carro-informacoes {
+    flex: 1;
+}
+
+.carro-informacoes h3 {
+    color: #d32f2f;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.carro-informacoes > p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.disponibilidade .dispo {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.disponibilidade .indisponivel {
+    color: #dc0a0a;
+    font-weight: bold;
+}
+
+.carro-dados {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+.carro-dados p {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.carro-dados strong {
+    color: #fff;
+}
+
+.botao-carro {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    transition: transform 0.3s;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.galeria img:hover {
-    transform: scale(1.05);
+.botao-carro:hover {
+    background-color: #111;
+    border: 1px solid #d32f2f;
 }
 
-/* Patrocinadores (Requisito 11) */
 .sponsors {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -75,7 +311,132 @@ nav a:hover {
     max-width: 150px;
 }
 
-/* Tabela (Requisito 12) */
+.sponsors b {
+    color: #d32f2f;
+}
+
+/* 5. PÁGINA EMPRESA / BRIEFING */
+.empresa > p:first-of-type {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-left: 4px solid #d32f2f;
+    padding: 18px 20px;
+    line-height: 1.7;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.empresa ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: briefing;
+}
+
+.empresa ol li {
+    counter-increment: briefing;
+    background-color: rgba(20, 20, 20, 0.90);
+    border: 1px solid #333;
+    border-left: 4px solid #d32f2f;
+    margin-bottom: 15px;
+    padding: 20px 25px 20px 70px;
+    border-radius: 6px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.empresa ol li::before {
+    content: counter(briefing);
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    width: 35px;
+    height: 35px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.empresa ol li:hover {
+    transform: translateX(5px);
+    border-color: #d32f2f;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.25);
+}
+
+.empresa ol li strong {
+    color: #d32f2f;
+    font-size: 17px;
+}
+
+.empresa ol li p {
+    color: #dddddd;
+    line-height: 1.7;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.empresa > p:last-child {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.empresa > p:last-child a {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.empresa > p:last-child a:hover {
+    background-color: #111;
+    border: 1px solid #d32f2f;
+}
+
+/* 6. PÁGINA GALERIA */
+.galeria,
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img,
+.grid-galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.galeria img:hover,
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* 7. PÁGINA DE TABELAS*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #000;
+}
+
+th, td {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+/* 7. PÁGINA DE TABELAS (CORES ÚNICAS) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -89,31 +450,133 @@ th, td {
     text-align: center;
 }
 
-/* Rodapé (Requisito do PDF) */
-footer {
-    background-color: #111;
-    color: #aaa;
+/* Linha 1 - Cabeçalho */
+.bg-row1-1 { background-color: #aa0000; color: white; }
+.bg-row1-2 { background-color: #bb0000; color: white; }
+.bg-row1-3 { background-color: #cc0000; color: white; }
+.bg-row1-4 { background-color: #dd0000; color: white; }
+.bg-row1-5 { background-color: #ee0000; color: white; }
+
+/* Linha 2 - Porsche Taycan */
+.bg-row2-1 { background-color: #ffcccc; }
+.bg-row2-2 { background-color: #ffe6cc; }
+.bg-row2-3 { background-color: #ffffcc; }
+.bg-row2-4 { background-color: #e6ffcc; }
+
+/* Linha 3 - 911 GT3 */
+.bg-row3-1 { background-color: #ccffcc; }
+.bg-row3-2 { background-color: #ccffe6; }
+.bg-row3-3 { background-color: #ccffff; }
+.bg-row3-4 { background-color: #cce6ff; }
+
+/* Linha 4 - Ferrari */
+.bg-row4-1 { background-color: #ccccff; }
+.bg-row4-2 { background-color: #e6ccff; }
+.bg-row4-3 { background-color: #ffccff; }
+.bg-row4-4 { background-color: #ffcce6; }
+.bg-row4-5 { background-color: #ffb3b3; }
+
+/* Linha 5 - BMW */
+.bg-row5-1 { background-color: #ffd9b3; }
+.bg-row5-2 { background-color: #ffffb3; }
+.bg-row5-3 { background-color: #d9ffb3; }
+.bg-row5-4 { background-color: #b3ffb3; }
+.bg-row5-5 { background-color: #b3ffd9; }
+
+/* Linha 6 - Mercedes */
+.bg-row6-1 { background-color: #b3ffff; }
+.bg-row6-2 { background-color: #b3d9ff; }
+.bg-row6-3 { background-color: #b3b3ff; }
+.bg-row6-4 { background-color: #d9b3ff; }
+
+/* Linha 7 - Maserati */
+.bg-row7-1 { background-color: #ffb3ff; }
+.bg-row7-2 { background-color: #ffb3d9; }
+.bg-row7-3 { background-color: #ff9999; }
+.bg-row7-4 { background-color: #ffcc99; }
+.bg-row7-5 { background-color: #ffff99; }
+
+/* Linha 8 - Honda Type R */
+.bg-row8-1 { background-color: #ccff99; }
+.bg-row8-2 { background-color: #99ff99; }
+.bg-row8-3 { background-color: #99ffcc; }
+.bg-row8-4 { background-color: #99ffff; }
+.bg-row8-5 { background-color: #99ccff; }
+
+/* Linha 9 - Audi RS 3 */
+.bg-row9-1 { background-color: #9999ff; }
+.bg-row9-2 { background-color: #cc99ff; }
+.bg-row9-3 { background-color: #ff99ff; }
+.bg-row9-4 { background-color: #ff99cc; }
+
+/* Linha 10 - Fiat Palio */
+.bg-row10-1 { background-color: #ff8080; }
+.bg-row10-2 { background-color: #ffbf80; }
+.bg-row10-3 { background-color: #ffff80; }
+.bg-row10-4 { background-color: #bfff80; }
+.bg-row10-5 { background-color: #80ff80; }
+
+/* Linha 11 - Ford Ka */
+.bg-row11-1 { background-color: #80ffbf; }
+.bg-row11-2 { background-color: #80ffff; }
+.bg-row11-3 { background-color: #80bfff; }
+
+/* Linha 12 - Peugeot 206 */
+.bg-row12-1 { background-color: #8080ff; }
+.bg-row12-2 { background-color: #bf80ff; }
+.bg-row12-3 { background-color: #ff80ff; }
+.bg-row12-4 { background-color: #ff80bf; }
+
+/* Linha 13 - Renault Clio */
+.bg-row13-1 { background-color: #f2a8a8; }
+.bg-row13-2 { background-color: #f2cda8; }
+.bg-row13-3 { background-color: #f2f2a8; }
+
+/* Linha 14 - VW Golf */
+.bg-row14-1 { background-color: #cdf2a8; }
+.bg-row14-2 { background-color: #a8f2a8; }
+.bg-row14-3 { background-color: #a8f2cd; }
+.bg-row14-4 { background-color: #a8f2f2; }
+
+/* Linha 15 - Lifan 620 */
+.bg-row15-1 { background-color: #a8cdf2; }
+.bg-row15-2 { background-color: #a8a8f2; }
+.bg-row15-3 { background-color: #cda8f2; }
+.bg-row15-4 { background-color: #f2a8f2; }
+
+/* 8. PÁGINA ARTIGOS (Textos e Âncoras)*/
+.artigo-secao {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.voltar-topo {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.artigo-secao .artigo-texto {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* 9. PÁGINA DOCUMENTOS (Wireframes) */
+.wireframe-section {
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
-/* Configuração da Galeria em 3 Colunas */
-.grid-galeria {
-    display: grid;
-    /* Cria 3 colunas de tamanhos iguais */
-    grid-template-columns: repeat(3, 1fr);
-    /* Espaçamento entre as fotos */
-    gap: 15px; 
-    margin-top: 20px;
+.wireframe-section h3 {
+    color: #d32f2f;
+    margin-bottom: 15px;
 }
 
-/* Padronizando o tamanho de todas as 25 fotos */
-.grid-galeria img {
-    width: 100%;
-    height: 250px; /* Define uma altura fixa para todas */
-    object-fit: cover; /* Faz a imagem preencher o espaço sem amassar ou esticar */
-    border-radius: 8px; /* Deixa as bordas levemente arredondadas */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.wireframe-section img {
+    max-width: 85%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }

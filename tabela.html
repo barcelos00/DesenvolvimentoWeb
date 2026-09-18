@@ -18,59 +18,134 @@
     <div class="container">
         <h2>Comparativo Técnico de Veículos</h2>
         <table>
-            <!-- Linha 1 (Cabeçalho) -->
-            <tr style="background-color: #d32f2f; color: white;">
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Motor</th>
-                <th>0-100 km/h</th>
-                <th>Preço</th>
-            </tr>
-            <!-- Linhas de Dados com Mesclagens -->
             <tr>
-                <td rowspan="3" style="background-color: #fca5a5;">Porsche</td> <!-- Rowspan 1 -->
-                <td style="background-color: #fef08a;">911 Carrera</td>
-                <td style="background-color: #bbf7d0;">3.0 Boxer</td>
-                <td style="background-color: #bfdbfe;">4.2s</td>
-                <td style="background-color: #e9d5ff;">R$ 900.000</td>
+                <th class="bg-row1-1">Categoria / Marca</th>
+                <th class="bg-row1-2">Modelo</th>
+                <th class="bg-row1-3">Motor</th>
+                <th class="bg-row1-4">0-100 km/h</th>
+                <th class="bg-row1-5">Preço</th>
             </tr>
+            
+            <!-- (Porsche Taycan) -->
             <tr>
-                <td style="background-color: #fef08a;">GT3 RS</td>
-                <td style="background-color: #bbf7d0;">4.0 Boxer V6</td>
-                <td colspan="2" style="background-color: #fed7aa;">Consultar Concessionária</td> <!-- Colspan 1 -->
+                <td rowspan="2" class="bg-row2-1">Porsche</td>
+                <td class="bg-row2-2">Taycan</td>
+                <td colspan="2" class="bg-row2-3">Elétrico de Alta Performance</td>
+                <td class="bg-row2-4">R$ 410.000</td>
             </tr>
+            
+            <!-- (Porsche 911) -->
             <tr>
-                <td style="background-color: #fef08a;">Taycan</td>
-                <td colspan="3" style="background-color: #99f6e4;">Elétrico - Especificações Variáveis</td> <!-- Colspan 2 -->
+                <td class="bg-row3-1">911 GT3</td>
+                <td class="bg-row3-2">4.0 Boxer V6</td>
+                <td class="bg-row3-3">3.2s</td>
+                <td class="bg-row3-4">R$ 500.000</td>
             </tr>
+            
+            <!-- (Ferrari) -->
             <tr>
-                <td rowspan="2" style="background-color: #fca5a5;">Ferrari</td> <!-- Rowspan 2 -->
-                <td style="background-color: #fef08a;">458 Speciale</td>
-                <td rowspan="2" style="background-color: #bbf7d0;">V8 Aspirado</td> <!-- Rowspan 3 -->
-                <td style="background-color: #bfdbfe;">3.0s</td>
-                <td style="background-color: #e9d5ff;">R$ 3.5M</td>
+                <td class="bg-row4-1">Ferrari</td>
+                <td class="bg-row4-2">Tributo</td>
+                <td class="bg-row4-3">V8 Turbo</td>
+                <td class="bg-row4-4">2.9s</td>
+                <td class="bg-row4-5">R$ 600.000</td>
             </tr>
+            
+            <!-- (BMW) -->
             <tr>
-                <td style="background-color: #fef08a;">F8 Tributo</td>
-                <td style="background-color: #bfdbfe;">2.9s</td>
-                <td style="background-color: #e9d5ff;">R$ 4.0M</td>
+                <td class="bg-row5-1">BMW</td>
+                <td class="bg-row5-2">M2</td>
+                <td class="bg-row5-3">3.0 TwinPower</td>
+                <td class="bg-row5-4">4.1s</td>
+                <td class="bg-row5-5">R$ 620.000</td>
             </tr>
+            
+            <!-- (Mercedes) -->
             <tr>
-                <td rowspan="2" style="background-color: #fca5a5;">BMW</td> <!-- Rowspan 4 -->
-                <td style="background-color: #fef08a;">M2</td>
-                <td style="background-color: #bbf7d0;">3.0 TwinPower</td>
-                <td style="background-color: #bfdbfe;">4.1s</td>
-                <td style="background-color: #e9d5ff;">R$ 600.000</td>
+                <td class="bg-row6-1">Mercedes</td>
+                <td class="bg-row6-2">AMG GT Coupé</td>
+                <td class="bg-row6-3">V8 Biturbo</td>
+                <td colspan="2" class="bg-row6-4">R$ 1.735.900 (Lançamento)</td>
             </tr>
+            
+            <!-- (Maserati) -->
             <tr>
-                <td colspan="4" style="background-color: #fbcfe8;">Outros modelos em breve...</td> <!-- Colspan 3 -->
+                <td class="bg-row7-1">Maserati</td>
+                <td class="bg-row7-2">Grecale Trofeo</td>
+                <td class="bg-row7-3">V6 Nettuno</td>
+                <td class="bg-row7-4">3.8s</td>
+                <td class="bg-row7-5">R$ 1.100.000</td>
             </tr>
-            <!-- Adicione as linhas restantes (8 a 15) preenchendo com TDs normais para completar as 15 exigidas -->
-            <tr style="background-color: #e2e8f0;"><td>Audi</td><td>R8</td><td>V10</td><td>3.2s</td><td>R$ 1.5M</td></tr>
-            <tr style="background-color: #cbd5e1;"><td>Nissan</td><td>GTR</td><td>V6 Bi-Turbo</td><td>2.8s</td><td>R$ 1.2M</td></tr>
-            <tr style="background-color: #e2e8f0;"><td colspan="5" style="background-color: #a78bfa; color: white;">Fim da Tabela de Alta Performance</td></tr> <!-- Colspan 4 -->
-            <!-- Continue até dar 15 linhas no total (contando com o cabeçalho) -->
+            
+            <!-- (Honda Type R) -->
+            <tr>
+                <td rowspan="2" class="bg-row8-1">Hatch Esportivo</td>
+                <td class="bg-row8-2">Honda Civic Type R</td>
+                <td class="bg-row8-3">2.0 Turbo</td>
+                <td class="bg-row8-4">5.4s</td>
+                <td class="bg-row8-5">R$ 429.900</td>
+            </tr>
+            
+            <!-- (Audi RS 3) -->
+            <tr>
+                <td class="bg-row9-1">Audi RS 3</td>
+                <td class="bg-row9-2">2.5 TFSI</td>
+                <td class="bg-row9-3">3.8s</td>
+                <td class="bg-row9-4">R$ 659.990</td>
+            </tr>
+            
+            <!--  (Fiat Palio) -->
+            <tr>
+                <td rowspan="3" class="bg-row10-1">Populares 1.0</td>
+                <td class="bg-row10-2">Fiat Palio Attractive</td>
+                <td class="bg-row10-3">1.0 Flex</td>
+                <td class="bg-row10-4">14.5s</td>
+                <td class="bg-row10-5">R$ 35.000</td>
+            </tr>
+            
+            <!-- (Ford Ka) -->
+            <tr>
+                <td class="bg-row11-1">Ford Ka</td>
+                <td class="bg-row11-2">1.0 MPI 8V</td>
+                <td colspan="2" class="bg-row11-3">R$ 22.900 - Econômico</td>
+            </tr>
+            
+            <!-- (Peugeot 206) -->
+            <tr>
+                <td class="bg-row12-1">Peugeot 206 Presence</td>
+                <td class="bg-row12-2">1.4 Flex</td>
+                <td class="bg-row12-3">13.0s</td>
+                <td class="bg-row12-4">R$ 16.800</td>
+            </tr>
+            
+            <!-- (Renault Clio) -->
+            <tr>
+                <td rowspan="3" class="bg-row13-1">Usados Diversos</td>
+                <td class="bg-row13-2">Renault Clio</td>
+                <td colspan="3" class="bg-row13-3">74cv de potência - R$ 16.800</td>
+            </tr>
+            
+            <!-- (VW Golf) -->
+            <tr>
+                <td class="bg-row14-1">VW Golf Comfort</td>
+                <td class="bg-row14-2">1.4 TSI</td>
+                <td class="bg-row14-3">8.5s</td>
+                <td class="bg-row14-4">R$ 16.800</td>
+            </tr>
+            
+            <!-- (Lifan 620) -->
+            <tr>
+                <td class="bg-row15-1">Lifan 620 Talent</td>
+                <td class="bg-row15-2">1.6 Gasolina</td>
+                <td class="bg-row15-3">13.5s</td>
+                <td class="bg-row15-4">R$ 22.000</td>
+            </tr>
         </table>
     </div>
+
+    <footer>
+        <p>Curso: Ciência da Computação - UniCEUB | Disciplina: Desenvolvimento Web | Turma: B</p>
+        <p>Integrantes do Grupo 6: Victor Barcelos, Gabriel Henrique, Lucas Werneck, Victor Silva</p>
+    </footer>
 </body>
 </html>
