@@ -19,7 +19,7 @@ function iniciarCarrosselDestaques(seletor) {
 
     if (elemento) {
         // Estilo básico aplicado via JavaScript
-        elemento.style.color = "#0ea5e9";
+        elemento.style.color = "#B3006B";
         elemento.style.fontWeight = "bold";
         elemento.style.textAlign = "center";
         elemento.style.fontSize = "18px";
