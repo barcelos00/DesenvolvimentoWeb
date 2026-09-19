@@ -288,13 +288,7 @@ footer {
 .sponsors img {
     max-width: 150px;
     transition: 0.3s;
-    opacity: 0.7;
 }
-
-/* .sponsors img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-} */
 
 /*    5. PÁGINA EMPRESA / BRIEFING  */
 .empresa > p:first-of-type {
