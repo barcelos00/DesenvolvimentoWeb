@@ -256,8 +256,11 @@ footer {
 /* PATROCINIO */
 
 .sponsors {
-    justify-content: space-around;
-    align-items: center;
+    display: flex; /* Ativa o alinhamento flexível */
+    justify-content: space-around; /* Distribui o espaço entre as imagens */
+    align-items: center; /* Centraliza na vertical */
+    flex-wrap: wrap; /* Permite que os logos desçam de linha em telas pequenas */
+    gap: 20px; /* Garante um espaço mínimo entre eles se a tela encolher */
     margin-top: 20px;
     background: #1e1e1e;
     padding: 20px;
@@ -268,6 +271,11 @@ footer {
 .sponsors img {
     max-width: 150px;
     transition: 0.3s;
+}
+
+.sponsors a:hover img {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.05);
 }
 
 /* BRIFING PARTE INICIAL */
