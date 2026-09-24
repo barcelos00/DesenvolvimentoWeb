@@ -61,10 +61,10 @@ function simularFinanciamento(nomeCarro, precoCarro) {
         
         else {
             
-            // Calcula o saldo restante
+            
             var saldoDevedor = valorVeiculo - valorEntrada;
 
-            // Escolha das parcelas
+            
             var escolhaParcelas = prompt(
                 "ESCOLHA O PRAZO DO FINANCIAMENTO\n\n" +
                 "1 - 24 parcelas\n" +
@@ -89,10 +89,9 @@ function simularFinanciamento(nomeCarro, precoCarro) {
                 return;
             }
 
-            // Calcula o valor de cada parcela
+            
             var valorParcela = saldoDevedor / parcelas;
 
-            // Mostra o resultado
             alert(
                 "✅ SIMULAÇÃO APROVADA!\n\n" +
                 "Veículo: " + nomeCarro + "\n" +
