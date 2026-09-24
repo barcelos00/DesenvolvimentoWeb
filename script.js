@@ -38,16 +38,19 @@ function iniciarCarrosselDestaques(seletor) {
 
 function simularFinanciamento(nomeCarro, precoCarro) {
     
-    var entrada = prompt("SIMULADOR SOFTCAR\n\nVeículo: " + nomeCarro + "\nValor Total: R$ " + precoCarro + "\n\nQual valor você deseja dar de entrada? (Apenas números, sem pontos)");
+    var entrada = prompt(
+        "SIMULADOR SOFTCAR\n\n" +
+        "Veículo: " + nomeCarro + "\n" +
+        "Valor Total: R$ " + precoCarro + "\n\n" +
+        "Qual valor você deseja dar de entrada?\n" +
+        "(Apenas números, sem pontos)"
+    );
 
-    
     if (entrada !== null && entrada !== "") {
         
-        
-        var valorEntrada = parseFloat(entrada); 
+        var valorEntrada = parseFloat(entrada);
         var valorVeiculo = parseFloat(precoCarro);
 
-        
         if (isNaN(valorEntrada)) {
             alert("Erro: Por favor, digite um valor numérico válido (ex: 50000).");
         } 
@@ -58,12 +61,46 @@ function simularFinanciamento(nomeCarro, precoCarro) {
         
         else {
             
+            // Calcula o saldo restante
             var saldoDevedor = valorVeiculo - valorEntrada;
-           
-            var parcelas = saldoDevedor / 48; 
-            
-            
-            alert("✅ SIMULAÇÃO APROVADA!\n\nVeículo: " + nomeCarro + "\nEntrada: R$ " + valorEntrada.toFixed(2) + "\nRestante: 48 parcelas fixas de R$ " + parcelas.toFixed(2) + " (Sem Juros)");
+
+            // Escolha das parcelas
+            var escolhaParcelas = prompt(
+                "ESCOLHA O PRAZO DO FINANCIAMENTO\n\n" +
+                "1 - 24 parcelas\n" +
+                "2 - 48 parcelas\n" +
+                "3 - 60 parcelas\n\n" +
+                "Digite 1, 2 ou 3:"
+            );
+
+            var parcelas;
+
+            if (escolhaParcelas === "1") {
+                parcelas = 24;
+            } 
+            else if (escolhaParcelas === "2") {
+                parcelas = 48;
+            } 
+            else if (escolhaParcelas === "3") {
+                parcelas = 60;
+            } 
+            else {
+                alert("Erro: Escolha inválida. Digite 1, 2 ou 3.");
+                return;
+            }
+
+            // Calcula o valor de cada parcela
+            var valorParcela = saldoDevedor / parcelas;
+
+            // Mostra o resultado
+            alert(
+                "✅ SIMULAÇÃO APROVADA!\n\n" +
+                "Veículo: " + nomeCarro + "\n" +
+                "Entrada: R$ " + valorEntrada.toFixed(2) + "\n" +
+                "Restante: R$ " + saldoDevedor.toFixed(2) + "\n\n" +
+                parcelas + " parcelas fixas de R$ " + valorParcela.toFixed(2) +
+                " (Sem Juros)"
+            );
         }
     }
 }
