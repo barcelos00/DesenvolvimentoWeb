@@ -1,5 +1,3 @@
-
-
 /* BASE  */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +11,7 @@ p {
     color: #fafafa;
     font-weight: bold;
 }
- /* CONTAINER PARA CENTRALIZAR O CONTEÚDO */
+ /* CENTRALIZAR O CONTEÚDO */
 .container {
     padding: 30px;
     max-width: 1200px;
@@ -357,7 +355,6 @@ footer {
 .galeria img:hover, .grid-galeria img:hover { transform: scale(1.05); }
 
 /* TABELAS */
-
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0e0; }
 
@@ -365,21 +362,22 @@ th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0
 .bg-row1-1 {background:#3d1438;} .bg-row1-2 {background:#471742;} .bg-row1-3 {background:#521a4c;} .bg-row1-4 {background:#5c1d56;} .bg-row1-5 {background:#662060;}
 
 /* CORPO */
+.bg-row2-1 {background:#181818;} .bg-row2-2 {background:#1a1a1c;} .bg-row2-3 {background:#1c1c1f;} .bg-row2-4 {background:#1e1e21;}
+.bg-row3-1 {background:#202024;} .bg-row3-2 {background:#222226;} .bg-row3-3 {background:#242429;} .bg-row3-4 {background:#26262b;}
+.bg-row4-1 {background:#29292e;} .bg-row4-2 {background:#2b2b31;} .bg-row4-3 {background:#2d2d33;} .bg-row4-4 {background:#303036;} .bg-row4-5 {background:#323238;}
+.bg-row5-1 {background:#181a18;} .bg-row5-2 {background:#1a1c1a;} .bg-row5-3 {background:#1c1f1c;} .bg-row5-4 {background:#1e211e;} .bg-row5-5 {background:#202420;}
+.bg-row6-1 {background:#222622;} .bg-row6-2 {background:#242924;} .bg-row6-3 {background:#262b26;} .bg-row6-4 {background:#292e29;}
+.bg-row7-1 {background:#2b312b;} .bg-row7-2 {background:#2d332d;} .bg-row7-3 {background:#303630;} .bg-row7-4 {background:#323832;} .bg-row7-5 {background:#343b34;}
+.bg-row8-1 {background:#18181a;} .bg-row8-2 {background:#1a1a1f;} .bg-row8-3 {background:#1c1c24;} .bg-row8-4 {background:#1e1e29;} .bg-row8-5 {background:#20202e;}
+.bg-row9-1 {background:#222233;} .bg-row9-2 {background:#242438;} .bg-row9-3 {background:#26263d;} .bg-row9-4 {background:#292942;}
+.bg-row10-1{background:#2b2b47;} .bg-row10-2{background:#2d2d4c;} .bg-row10-3{background:#303052;} .bg-row10-4{background:#323257;} .bg-row10-5{background:#34345c;}
+.bg-row11-1{background:#1a1818;} .bg-row11-2{background:#1f1a1a;} .bg-row11-3{background:#241c1c;}
+.bg-row12-1{background:#291e1e;} .bg-row12-2{background:#2e2020;} .bg-row12-3{background:#332222;} .bg-row12-4{background:#382424;}
+.bg-row13-1{background:#3d2626;} .bg-row13-2{background:#422929;} .bg-row13-3{background:#472b2b;}
+.bg-row14-1{background:#181a1c;} .bg-row14-2{background:#1a1d1f;} .bg-row14-3{background:#1c1f24;} .bg-row14-4{background:#1e2229;}
+.bg-row15-1{background:#20252e;} .bg-row15-2{background:#222833;} .bg-row15-3{background:#242a38;} .bg-row15-4{background:#262d3d;}
+.bg-row16-1{background:#2a2f38;} .bg-row16-2{background:#2c313a;} .bg-row16-3{background:#2e333d;} .bg-row16-4{background:#303540;}
 
-.row2-1 {background:#181818;} .row2-2 {background:#1a1a1c;} .row2-3 {background:#1c1c1f;} .row2-4 {background:#1e1e21;}
-.row3-1 {background:#202024;} .row3-2 {background:#222226;} .row3-3 {background:#242429;} .row3-4 {background:#26262b;}
-.row4-1 {background:#29292e;} .row4-2 {background:#2b2b31;} .row4-3 {background:#2d2d33;} .row4-4 {background:#303036;} .row4-5 {background:#323238;}
-.row5-1 {background:#181a18;} .row5-2 {background:#1a1c1a;} .row5-3 {background:#1c1f1c;} .row5-4 {background:#1e211e;} .row5-5 {background:#202420;}
-.row6-1 {background:#222622;} .row6-2 {background:#242924;} .row6-3 {background:#262b26;} .row6-4 {background:#292e29;}
-.row7-1 {background:#2b312b;} .row7-2 {background:#2d332d;} .row7-3 {background:#303630;} .row7-4 {background:#323832;} .row7-5 {background:#343b34;}
-.row8-1 {background:#18181a;} .row8-2 {background:#1a1a1f;} .row8-3 {background:#1c1c24;} .row8-4 {background:#1e1e29;} .row8-5 {background:#20202e;}
-.row9-1 {background:#222233;} .row9-2 {background:#242438;} .row9-3 {background:#26263d;} .row9-4 {background:#292942;}
-.row10-1{background:#2b2b47;} .row10-2{background:#2d2d4c;} .row10-3{background:#303052;} .row10-4{background:#323257;} .row10-5{background:#34345c;}
-.row11-1{background:#1a1818;} .row11-2{background:#1f1a1a;} .row11-3{background:#241c1c;}
-.row12-1{background:#291e1e;} .row12-2{background:#2e2020;} .row12-3{background:#332222;} .row12-4{background:#382424;}
-.row13-1{background:#3d2626;} .row13-2{background:#422929;} .row13-3{background:#472b2b;}
-.row14-1{background:#181a1c;} .row14-2{background:#1a1d1f;} .row14-3{background:#1c1f24;} .row14-4{background:#1e2229;}
-.row15-1{background:#20252e;} .row15-2{background:#222833;} .row15-3{background:#242a38;} .row15-4{background:#262d3d;}
 
 /* ARTIGOS */
 .artigo-secao {
