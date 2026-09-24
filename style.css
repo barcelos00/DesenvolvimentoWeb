@@ -1,39 +1,32 @@
-/*    ÍNDICE DO CSS - PROJETO SOFTCAR (TEMA DARK TECH - ROXO E AZUL CELESTE)
-   
-   1. Geral e Base (Body, Container, Tipografia)
-   2. Cabeçalho e Rodapé (Nav, Footer, Logo)
-   3. Componentes Reutilizáveis (Botões, Links, Citações)
-   4. Página Inicial (Catálogo de Carros, Patrocinadores)
-   5. Página Empresa / Briefing
-   6. Página Galeria
-   7. Página de Tabelas (Cores Únicas Otimizadas)
-   8. Página Artigos (Textos e Âncoras)
-   9. Página de Documentos (Wireframes)
-   10. Responsividade (Mobile)
-    */
 
-/*    1. GERAL E BASE*/
+
+/* BASE  */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundo escuro para não cansar a vista */
-    color: #e0e0e0; /* Texto em cinza clarinho (gelo) para conforto visual */
+    background-color: #121212;  
+    color: #e0e0e0; 
 }
 
+p {
+    color: #fafafa;
+    font-weight: bold;
+}
+ /* CONTAINER PARA CENTRALIZAR O CONTEÚDO */
 .container {
     padding: 30px;
     max-width: 1200px;
     margin: 30px auto;
-    background-color: rgba(24, 24, 26, 0.95); /* Fundo dos painéis levemente mais claro que o body */
+    background-color: rgba(24, 24, 26, 0.95); 
     min-height: 80vh;
     border-radius: 12px;
-    border-top: 4px solid #370A40; /* Linha Roxa no topo do painel */
+    border-top: 4px solid #370A40; 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Tipografia (Títulos) */
-.container h1 {
+
+h1 {
     font-weight: bold;
     font-style: italic;
     font-size: 38px;
@@ -43,12 +36,12 @@ body {
     color: #ffffff;
 }
 
-.container h1:hover {
-    color: #B3006B; /* Azul Celeste ao passar o mouse */
+h1:hover {
+    color: #B3006B; 
 }
 
-.container h2 {
-    color: #B3006B; /* Azul Celeste nos Títulos */
+h2 {
+    color: #B3006B; 
     text-align: center;
     font-size: 32px;
     margin-bottom: 10px;
@@ -59,50 +52,45 @@ body {
     font-family: 'Montserrat', 'Arial Black', sans-serif;
 }
 
-.container h3 {
+h3 {
     color: white;
+    font-style: bold;
 }
 
-/*    2. CABEÇALHO E RODAPÉ  */
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 25px;
-    margin: 30px 0 20px 0;
-}
+/* LOGO SOFTCAR */
 
 .logo img {
-    display: block;
-    width: 220px;
+    margin: 30px 0 20px 0;
+    width: 300px;
     max-width: 80%;
     height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    object-fit: contain; /*controla como o conteudo da imagem se encaixa*/
 }
-
+/* BARRA DE NAVEGAÇÃO */
 nav {
-    background-color: #4a1545; /* Roxo Escuro */
+    background-color: #4a1545; 
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border-bottom: 3px solid #B3006B; /* Detalhe em Azul Celeste */
+    border-bottom: 3px solid #B3006B; 
 }
 
 nav a {
-    float: left;
+    float: left; /*joga para esquerda */
     display: block;
     color: #ffffff;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
     text-align: center;
-    padding: 16px 20px;
+    padding: 40px 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; /*espaço dentro do elemeto*/
     letter-spacing: 0.5px;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 nav a:hover {
-    background-color: #6e2066; /* Roxo mais claro no Hover */
-    color: #B3006B; /* Letra azul no Hover */
+    background-color: #6e2066; 
+    color: #B3006B; 
 }
 
 footer {
@@ -110,16 +98,15 @@ footer {
     color: #888888;
     text-align: center;
     padding: 25px;
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 30px;
-    border-top: 2px solid #6e2066;
+    border-top: 2px solid #6e2066; 
 }
 
-/*    3. COMPONENTES REUTILIZÁVEIS   */
-/* Botão de Destaque */
+/* BOTAO INICIAL JS */
 .btn-destaque {
-    background-color: #B3006B; /* Azul Celeste */
-    color: #ffffff; /* Texto branco */
+    background-color: #B3006B; 
+    color: #ffffff; 
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
@@ -134,17 +121,13 @@ footer {
 }
 
 .btn-destaque:hover {
-    background-color: #6e2066; /* Fica Roxo */
-    color: #ffffff; /* Texto branco */
-    box-shadow: 0 8px 15px rgba(110, 32, 102, 0.5); /* Brilho roxo */
+    background-color: #6e2066; 
+    color: #ffffff; 
+    box-shadow: 0 8px 15px rgba(110, 32, 102, 0.5); 
     transform: translateY(-3px); 
 }
 
-.btn-destaque:active {
-    transform: translateY(1px); 
-}
-
-/* Lista de Links Externos (Página de 10 sites) */
+/* LINKS DO BRINFING */
 .links {
     display: flex;
     flex-direction: column;
@@ -152,7 +135,7 @@ footer {
     background-color: #1e1e1e;
     padding: 25px;
     border-radius: 8px;
-    border-left: 5px solid #6e2066; /* Roxo */
+    border-left: 5px solid #6e2066; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -169,19 +152,19 @@ footer {
 }
 
 .link-item:hover {
-    background-color: #6e2066; /* Roxo */
+    background-color: #6e2066; 
     transform: translateX(10px);
     border-left: 3px solid #B3006B;
     box-shadow: 0 4px 12px rgba(110, 32, 102, 0.4);
-}
+} 
 
 /* Citações */
 .citacao {
     max-width: 800px;
     margin: 40px auto;
     padding: 25px 35px;
-    background-color: rgba(110, 32, 102, 0.1); /* Fundo roxo bem suave */
-    border-left: 4px solid #B3006B; /* Borda Azul Celeste */
+    background-color: rgba(110, 32, 102, 0.1); 
+    border-left: 4px solid #B3006B; 
     border-radius: 6px;
     text-align: center;
 }
@@ -197,17 +180,18 @@ footer {
     font-weight: 300;
 }
 
-/*    4. PÁGINA INICIAL (Catálogo e Patrocinadores)  */
+/* PARTE INCIAL DOS PRODUTOS INDEX */
+
 .produtos { margin-top: 50px; }
-.descricao-produtos { text-align: center; color: #aaaaaa; margin-bottom: 30px; }
+.descricao-produtos { text-align: center; color: #fafafa; margin-bottom: 30px; }
 
 .carro {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: #1e1e1e; /* Card escuro */
+    background-color: #1e1e1e;  
     border: 1px solid #333;
-    border-left: 4px solid #6e2066; /* Borda Roxa */
+    border-left: 4px solid #6e2066; 
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
@@ -216,7 +200,7 @@ footer {
 
 .carro:hover {
     transform: translateX(5px);
-    border-color: #B3006B; /* Borda Azul no Hover */
+    border-color: #B3006B; 
     box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15);
 }
 
@@ -231,7 +215,7 @@ footer {
 .carro-informacoes { flex: 1; }
 
 .carro-informacoes h3 {
-    color: #B3006B; /* Título Azul Celeste */
+    color: #B3006B; 
     font-size: 25px;
     margin-top: 0; margin-bottom: 10px;
 }
@@ -241,41 +225,37 @@ footer {
 .disponibilidade .dispo { color: #4caf50; font-weight: bold; }
 .disponibilidade .indisponivel { color: #ef5350; font-weight: bold; }
 
-.carro-dados {
-    margin-top: 20px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
-}
 
+
+/* BOTAO E LINK EXTERNO COM O MSM ESTILO */
 .carro-dados p { margin: 8px 0; color: #aaaaaa; }
 .carro-dados strong { color: #ffffff; }
 .botao-carro {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 190px;         /* Força os dois a terem exatamente a mesma largura */
-    height: 45px;         /* Força os dois a terem exatamente a mesma altura */
+    width: 190px;         
+    height: 45px;         
     margin-top: 15px;
     background-color: transparent;
-    color: #B3006B;
-    border: 2px solid #B3006B; /* Borda 2px para ficar bem visível como na sua imagem */
+    color: #e5e0e3;
+    border: 2px solid #B3006B; 
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 15px;      /* Padroniza o tamanho da fonte entre o botão e o link */
-    font-family: inherit; /* Força o <button> a usar a mesma fonte do resto do site */
-    cursor: pointer;      /* Coloca a "mãozinha" quando passar o mouse no <button> */
+    font-size: 15px;      
+    font-family: inherit; 
+    cursor: pointer;      
     transition: 0.3s;
-    box-sizing: border-box; /* Impede que a borda altere o tamanho final */
 }
 
 .botao-carro:hover {
     background-color: #B3006B;
     color: #ffffff;
 }
+/* PATROCINIO */
 
 .sponsors {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
@@ -290,9 +270,10 @@ footer {
     transition: 0.3s;
 }
 
-/*    5. PÁGINA EMPRESA / BRIEFING  */
+/* BRIFING PARTE INICIAL */
+
 .empresa > p:first-of-type {
-    background-color: rgba(110, 32, 102, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-left: 4px solid #B3006B;
     padding: 18px 20px;
     line-height: 1.7;
@@ -308,7 +289,7 @@ footer {
     counter-increment: briefing;
     background-color: #1e1e1e;
     border: 1px solid #333;
-    border-left: 4px solid #6e2066; /* Borda Roxa */
+    border-left: 4px solid #6e2066; 
     margin-bottom: 15px;
     padding: 20px 25px 20px 70px;
     border-radius: 6px;
@@ -320,7 +301,7 @@ footer {
     content: counter(briefing);
     position: absolute;
     left: 20px; top: 18px; width: 35px; height: 35px;
-    background-color: #6e2066; /* Bolinha Roxa */
+    background-color: #6e2066; 
     color: white;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
@@ -333,7 +314,7 @@ footer {
 }
 
 .empresa ol li strong { color: #B3006B; font-size: 17px; }
-.empresa ol li p { color: #cccccc; line-height: 1.7; margin-top: 10px; margin-bottom: 0; }
+.empresa ol li p { color: #f3f0f0; line-height: 1.7; margin-top: 10px; margin-bottom: 0; }
 
 .empresa > p:last-child { text-align: center; margin-top: 35px; }
 
@@ -350,7 +331,7 @@ footer {
 
 .empresa > p:last-child a:hover { background-color: #B3006B; color: #ffffff; }
 
-/*    6. PÁGINA GALERIA  */
+/* GALERIA */
 .galeria, .grid-galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -367,14 +348,16 @@ footer {
 
 .galeria img:hover, .grid-galeria img:hover { transform: scale(1.05); }
 
-/*    7. PÁGINA DE TABELAS (Tons Ultra Escuros para Conforto) */
+/* TABELAS */
+
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0e0; }
 
-/* Cabeçalho - Degradê de Roxos Escuros */
+/* CABEÇALHO */
 .bg-row1-1 {background:#3d1438;} .bg-row1-2 {background:#471742;} .bg-row1-3 {background:#521a4c;} .bg-row1-4 {background:#5c1d56;} .bg-row1-5 {background:#662060;}
 
-/* Corpo da tabela com tons super escuros */
+/* CORPO */
+
 .row2-1 {background:#181818;} .row2-2 {background:#1a1a1c;} .row2-3 {background:#1c1c1f;} .row2-4 {background:#1e1e21;}
 .row3-1 {background:#202024;} .row3-2 {background:#222226;} .row3-3 {background:#242429;} .row3-4 {background:#26262b;}
 .row4-1 {background:#29292e;} .row4-2 {background:#2b2b31;} .row4-3 {background:#2d2d33;} .row4-4 {background:#303036;} .row4-5 {background:#323238;}
@@ -390,7 +373,7 @@ th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0
 .row14-1{background:#181a1c;} .row14-2{background:#1a1d1f;} .row14-3{background:#1c1f24;} .row14-4{background:#1e2229;}
 .row15-1{background:#20252e;} .row15-2{background:#222833;} .row15-3{background:#242a38;} .row15-4{background:#262d3d;}
 
-/*    8. PÁGINA ARTIGOS (Textos e Âncoras) */
+/* ARTIGOS */
 .artigo-secao {
     margin-top: 50px; margin-bottom: 50px; padding-bottom: 20px;
     border-bottom: 1px solid #333;
@@ -401,14 +384,19 @@ th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0
 
 .artigo-secao .artigo-texto { color: #c48bc4; font-weight: bold; } 
 
-/*    9. PÁGINA DOCUMENTOS (Wireframes) */
+/* WIREFRAME DOCS */
+
 .wireframe-section { text-align: center; margin-bottom: 60px; }
-.wireframe-section h3 { color: #B3006B; margin-bottom: 15px; }
+.wireframe-section h3 { color: #B3006B; margin-bottom: 15px; font-size: 35px; }
 
 .wireframe-section img {
     max-width: 85%;
     border: 2px solid #6e2066; 
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+}
+
+.docs > p:first-of-type {
+    text-align: center;
 }
 
