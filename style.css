@@ -406,3 +406,67 @@ th, td { border: 1px solid #333; padding: 12px; text-align: center; color: #e0e0
     text-align: center;
 }
 
+/* LOGIN E CADASTRO */
+
+.auth-container {
+    max-width: 420px;
+}
+
+.auth-container .logo {
+    text-align: center;
+}
+
+.auth-container label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: #fafafa;
+    font-weight: bold;
+}
+
+.auth-container input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #121212;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-container input:focus {
+    outline: none;
+    border-color: #B3006B;
+}
+
+.auth-container .btn-destaque {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.auth-erro {
+    color: #ef5350;
+    min-height: 20px;
+    margin-bottom: 0;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.auth-link a {
+    color: #B3006B;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* BOTÃO SAIR NO MENU */
+nav a.sair {
+    float: right;
+}
