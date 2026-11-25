@@ -40,8 +40,8 @@
                     <option value="disponivel">Disponível</option>
                     <option value="indisponivel">Indisponível</option>
                 </select>
-                <label for="imagem">Caminho da imagem atual</label>
-                <input id="imagem" name="imagem" placeholder="imagens/imagens_ex/arquivo.png">
+                <label for="imagem">Caminho local ou URL HTTPS da imagem</label>
+                <input id="imagem" name="imagem" maxlength="2048" placeholder="https://exemplo.com/imagem-do-carro.jpg">
                 <label for="imagem-arquivo">Ou envie imagem JPG, PNG ou WEBP (máximo 5 MB)</label>
                 <input id="imagem-arquivo" name="imagemArquivo" type="file" accept="image/jpeg,image/png,image/webp">
                 <input type="hidden" name="removerImagem" value="0">

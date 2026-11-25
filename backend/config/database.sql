@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS veiculos (
     quilometragem INT UNSIGNED NOT NULL DEFAULT 0,
     ano SMALLINT UNSIGNED NOT NULL,
     disponibilidade ENUM('disponivel', 'indisponivel') NOT NULL DEFAULT 'disponivel',
-    imagem VARCHAR(255) NULL,
+    imagem VARCHAR(2048) NULL,
     link_oficial VARCHAR(500) NULL,
     criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     atualizado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS veiculos (
         REFERENCES categorias (id) ON UPDATE CASCADE ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-ALTER TABLE veiculos MODIFY imagem VARCHAR(255) NULL;
+ALTER TABLE veiculos MODIFY imagem VARCHAR(2048) NULL;
 
 CREATE TABLE IF NOT EXISTS pagamentos (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -95,31 +95,36 @@ INSERT INTO veiculos (
 )
 SELECT m.id, c.id, 'M2', 'Cupê esportivo com motor potente e tecnologia de condução.',
        '3.0 TwinPower Turbo', 4.1, 620000.00, 18500, 2025, 'disponivel',
-       'imagens/imagens_ex/bmw-4565066_1280.png', 'https://www.bmw.com.br/'
+       'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
+       'https://www.bmw.com.br/'
 FROM marcas m JOIN categorias c ON c.nome = 'Esportivos'
 WHERE m.nome = 'BMW'
 UNION ALL
 SELECT m.id, c.id, 'Taycan', 'Esportivo elétrico com foco em desempenho e conforto.',
        'Elétrico', 2.8, 850000.00, 12300, 2025, 'disponivel',
-       'imagens/imagens_ex/2025-Porsche-Taycan-5-1536x864-1.png', 'https://www.porsche.com/brazil/pt/'
+       'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80',
+       'https://www.porsche.com/brazil/pt/'
 FROM marcas m JOIN categorias c ON c.nome = 'Premium'
 WHERE m.nome = 'Porsche'
 UNION ALL
 SELECT m.id, c.id, '911 GT3', 'Esportivo de alto desempenho inspirado em carros de pista.',
        '4.0 Boxer', 3.2, 2450000.00, 8700, 2026, 'disponivel',
-       'imagens/imagens_ex/Porsche-911-GT3-RS-1-750x450.png', 'https://www.porsche.com/brazil/pt/'
+       'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
+       'https://www.porsche.com/brazil/pt/'
 FROM marcas m JOIN categorias c ON c.nome = 'Esportivos'
 WHERE m.nome = 'Porsche'
 UNION ALL
 SELECT m.id, c.id, 'Civic Type R', 'Hatch esportivo com motor turbo e câmbio manual.',
        '2.0 Turbo', 5.4, 429900.00, 8500, 2025, 'disponivel',
-       'imagens/imagens_ex/honda civic type r.png', 'https://www.honda.com.br/automoveis/'
+       'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+       'https://www.honda.com.br/automoveis/'
 FROM marcas m JOIN categorias c ON c.nome = 'Hatches'
 WHERE m.nome = 'Honda'
 UNION ALL
 SELECT m.id, c.id, 'Palio Attractive 1.0', 'Hatch compacto econômico para uso urbano.',
        '1.0 Flex', 14.5, 35000.00, 72400, 2016, 'disponivel',
-       'imagens/imagens_ex/palio attractive 1.0.png', 'https://www.fiat.com.br/'
+       'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80',
+       'https://www.fiat.com.br/'
 FROM marcas m JOIN categorias c ON c.nome = 'Usados'
 WHERE m.nome = 'Fiat'
-ON DUPLICATE KEY UPDATE modelo = VALUES(modelo);
+ON DUPLICATE KEY UPDATE imagem = VALUES(imagem);

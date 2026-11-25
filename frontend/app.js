@@ -36,7 +36,8 @@
                 method: method,
                 headers: headers,
                 body: body,
-                credentials: "same-origin"
+                credentials: "same-origin",
+                cache: "no-store"
             });
         } catch (error) {
             throw new Error("Não foi possível conectar ao backend. Verifique o Apache e tente novamente.");

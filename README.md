@@ -22,7 +22,7 @@ Em hospedagens compartilhadas, o MySQL pode aceitar conexões somente do própri
 
 O cadastro público (`frontend/cadastro.html`) cria somente contas de cliente/comprador; não há campo público para escolher privilégios. Entre com a conta administrativa de demonstração (`admin@softcar.local`, senha `123456`) e use **Administração > Contas de clientes e administradores** para criar clientes ou novos administradores. Troque a senha demonstrativa antes de publicar o sistema.
 
-O painel também permite criar, editar, excluir veículos e enviar imagens JPG, PNG ou WEBP de até 5 MB. Selecione o arquivo no campo de upload; a API cria `frontend/imagens/uploads/` quando necessário. Garanta permissão de gravação para o Apache. **Não apague as pastas de imagens**: o catálogo tem uma imagem substituta em `frontend/imagens/sem-imagem.svg`. Neste momento, as imagens estáticas de logo, veículos, patrocinadores e wireframes estão em `imagens/` na raiz, enquanto as páginas esperam encontrá-las em `frontend/imagens/`; elas não foram movidas conforme a decisão do responsável, então parte das imagens pode não aparecer até corrigir esse caminho. Ao substituir ou remover uma imagem enviada pelo painel, o arquivo antigo é removido automaticamente.
+O painel também permite criar, editar e excluir veículos; imagens podem ser enviadas como JPG, PNG ou WEBP de até 5 MB, ou vinculadas por uma URL HTTPS no campo da imagem. Os uploads ficam em `frontend/imagens/uploads/`, e a API grava o caminho/URL em `veiculos.imagem`. Garanta permissão de gravação para o Apache. As antigas fotos estáticas dos veículos foram removidas; os dados iniciais agora usam URLs externas. Mantenha `frontend/imagens/sem-imagem.svg` como imagem substituta e não apague a pasta de uploads. Logo, patrocinadores e wireframes são imagens estáticas separadas, ainda localizadas em `imagens/` na raiz. Ao substituir ou remover uma imagem enviada pelo painel, o arquivo antigo é removido automaticamente.
 
 ## Organização
 
@@ -43,6 +43,7 @@ softcar/
 │   ├── config/
 │   │   ├── db.php
 │   │   ├── database.sql
+│   │   ├── inserts.sql                  # veículos de exemplo com imagens externas
 │   │   └── database.config.php          # configuração local, ignorada pelo Git
 │   └── includes/api.php
 ├── index.html                # redireciona à entrada do front-end

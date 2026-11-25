@@ -32,9 +32,21 @@ function vehicleImage(array $data, ?string $currentImage): array
         if ($image === null || $image === '') {
             return [null, null];
         }
-        if (!is_string($image) || strpos($image, '..') !== false ||
-            !preg_match('~^imagens/[A-Za-z0-9._ /-]+$~', $image)) {
-            api_error('Informe um caminho de imagem local válido.', 400);
+        if (!is_string($image) || strlen($image) > 2048) {
+            api_error('Informe um caminho ou URL de imagem válido.', 400);
+        }
+
+        $isLocalImage = strpos($image, '..') === false &&
+            preg_match('~^imagens/[A-Za-z0-9._ /-]+$~', $image) === 1;
+        $urlParts = parse_url($image);
+        $isHttpsImage = filter_var($image, FILTER_VALIDATE_URL) !== false &&
+            is_array($urlParts) &&
+            strtolower($urlParts['scheme'] ?? '') === 'https' &&
+            !empty($urlParts['host']) &&
+            !isset($urlParts['user']) &&
+            !isset($urlParts['pass']);
+        if (!$isLocalImage && !$isHttpsImage) {
+            api_error('Use um caminho local ou uma URL HTTPS válida para a imagem.', 400);
         }
         return [$image, null];
     }
