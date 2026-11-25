@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTCAR - Administração</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="admin" data-protected="true" data-admin="true">
+    <nav id="app-nav"></nav>
+    <div id="app-status" class="app-status" role="status" aria-live="polite"></div>
+    <main class="container">
+        <h2>Painel de administração</h2>
+        <p>Cadastre e edite veículos. As alterações aparecem no catálogo e na tabela de especificações.</p>
+        <section class="painel-formulario">
+            <h3 id="titulo-form-veiculo">Adicionar veículo</h3>
+            <form id="admin-veiculo-form" class="form-painel" enctype="multipart/form-data">
+                <input type="hidden" name="id">
+                <label for="marca">Marca</label>
+                <input id="marca" name="marca" maxlength="80" required>
+                <label for="categoria">Categoria</label>
+                <input id="categoria" name="categoria" maxlength="80" required>
+                <label for="modelo">Modelo</label>
+                <input id="modelo" name="modelo" maxlength="120" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="3" required></textarea>
+                <label for="motor">Motor</label>
+                <input id="motor" name="motor" maxlength="100" required>
+                <label for="aceleracao-0-100">Aceleração de 0 a 100 km/h (segundos; opcional)</label>
+                <input id="aceleracao-0-100" name="aceleracao_0_100" type="number" min="0" max="99.9" step="0.1">
+                <label for="preco">Preço (R$)</label>
+                <input id="preco" name="preco" type="number" min="0" step="0.01" required>
+                <label for="quilometragem">Quilometragem</label>
+                <input id="quilometragem" name="quilometragem" type="number" min="0" step="1" required>
+                <label for="ano">Ano</label>
+                <input id="ano" name="ano" type="number" min="1886" required>
+                <label for="disponibilidade">Disponibilidade</label>
+                <select id="disponibilidade" name="disponibilidade" required>
+                    <option value="disponivel">Disponível</option>
+                    <option value="indisponivel">Indisponível</option>
+                </select>
+                <label for="imagem">Caminho da imagem atual</label>
+                <input id="imagem" name="imagem" placeholder="imagens/imagens_ex/arquivo.png">
+                <label for="imagem-arquivo">Ou envie imagem JPG, PNG ou WEBP (máximo 5 MB)</label>
+                <input id="imagem-arquivo" name="imagemArquivo" type="file" accept="image/jpeg,image/png,image/webp">
+                <input type="hidden" name="removerImagem" value="0">
+                <button id="remover-imagem" class="botao-excluir" type="button" hidden>Remover imagem atual</button>
+                <label for="link-oficial">Link oficial (opcional)</label>
+                <input id="link-oficial" name="link_oficial" type="url">
+                <button class="btn-destaque" type="submit">Salvar veículo</button>
+                <button id="cancelar-edicao" class="botao-excluir" type="button" hidden>Cancelar edição</button>
+            </form>
+        </section>
+        <h2>Veículos cadastrados (<span id="quantidade-veiculos">0</span>)</h2>
+        <div id="admin-veiculos" class="table-wrap"></div>
+        <section class="painel-formulario">
+            <h2>Contas de clientes e administradores</h2>
+            <p>O cadastro público cria somente contas de cliente. Use este formulário para criar uma conta administrativa ou cadastrar um cliente pelo painel.</p>
+            <form id="admin-usuario-form" class="form-painel">
+                <label for="usuario-nome">Nome</label>
+                <input id="usuario-nome" name="nome" maxlength="120" autocomplete="name" required>
+                <label for="usuario-email">E-mail</label>
+                <input id="usuario-email" name="email" type="email" maxlength="190" autocomplete="email" required>
+                <label for="usuario-senha">Senha (mínimo 6 caracteres)</label>
+                <input id="usuario-senha" name="senha" type="password" minlength="6" autocomplete="new-password" required>
+                <label for="usuario-perfil">Tipo de conta</label>
+                <select id="usuario-perfil" name="perfil" required>
+                    <option value="cliente">Cliente / comprador</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <button class="btn-destaque" type="submit">Criar conta</button>
+            </form>
+            <h3>Contas cadastradas</h3>
+            <div id="admin-usuarios" class="table-wrap"></div>
+        </section>
+    </main>
+    <footer id="app-footer"></footer>
+</body>
+</html>

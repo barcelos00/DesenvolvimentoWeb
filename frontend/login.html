@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTCAR - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="login">
+    <nav id="app-nav" hidden></nav>
+    <div id="app-status" class="app-status" role="status" aria-live="polite"></div>
+    <main class="container auth-container">
+        <div class="logo"><img src="imagens/imagens_ex/logo.png" alt="Logo SOFTCAR"></div>
+        <h2>Entrar</h2>
+        <form id="login-form">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="senha">Senha</label>
+            <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+            <button type="submit" class="btn-destaque">Entrar</button>
+        </form>
+        <p class="auth-link">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </main>
+</body>
+</html>

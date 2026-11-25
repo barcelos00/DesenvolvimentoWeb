@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTCAR - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="home" data-protected="true">
+    <nav id="app-nav"></nav>
+    <div id="app-status" class="app-status" role="status" aria-live="polite"></div>
+    <main class="container">
+        <h1>Bem-vindo à SOFTCAR</h1>
+        <div class="logo"><img src="imagens/imagens_ex/logo.png" alt="Logo SOFTCAR"></div>
+        <p class="descricao-site">A sua concessionária digital de veículos esportivos e de luxo.</p>
+        <button id="boas-vindas" class="btn-destaque" type="button">Clique aqui</button>
+        <p id="destaque" aria-live="polite"></p>
+        <section class="simulador">
+            <h2>Simulador de parcelas</h2>
+            <p>Estimativa acadêmica sem juros; não representa uma proposta de crédito.</p>
+            <form id="financiamento-form">
+                <label for="veiculo-simulacao">Veículo</label>
+                <select id="veiculo-simulacao" name="veiculo_id" required></select>
+                <label for="entrada-simulacao">Valor de entrada (R$)</label>
+                <input id="entrada-simulacao" name="entrada" type="number" min="0" step="0.01" value="0" required>
+                <label for="parcelas-simulacao">Prazo</label>
+                <select id="parcelas-simulacao" name="parcelas">
+                    <option value="24">24 parcelas</option>
+                    <option value="48">48 parcelas</option>
+                    <option value="60">60 parcelas</option>
+                </select>
+                <p id="resultado-simulacao" class="resultado-simulacao" aria-live="polite">Carregando veículos...</p>
+            </form>
+        </section>
+        <section class="produtos">
+            <h2 id="inicio">Veículos em destaque</h2>
+            <p class="descricao-produtos">Conheça os modelos disponíveis em nossa concessionária.</p>
+            <div id="lista-veiculos" class="lista-veiculos"></div>
+        </section>
+        <h2>Nossos Patrocinadores</h2>
+        <div class="sponsors">
+            <a href="https://www.michelin.com.br/" rel="noopener noreferrer"><img src="imagens/patrocionio/patrocinador1.png" alt="Michelin"></a>
+            <a href="https://www.motul.com/pt-BR" rel="noopener noreferrer"><img src="imagens/patrocionio/patrocinador2.png" alt="Motul"></a>
+            <a href="https://www.brembo.com/en" rel="noopener noreferrer"><img src="imagens/patrocionio/patrocinador3.png" alt="Brembo"></a>
+            <a href="https://www.pitstopcentercar.com.br/" rel="noopener noreferrer"><img src="imagens/patrocionio/patrocinador4.png" alt="Pit Stop Center Car"></a>
+        </div>
+    </main>
+    <footer id="app-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTCAR - Pagamento demonstrativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="pagamento" data-protected="true">
+    <nav id="app-nav"></nav>
+    <div id="app-status" class="app-status" role="status" aria-live="polite"></div>
+    <main class="container auth-container">
+        <h2>Pagamento demonstrativo</h2>
+        <div id="resumo-veiculo">Carregando veículo...</div>
+        <p class="aviso-demonstracao">Esta etapa é apenas uma simulação acadêmica. Não informe dados de cartão; nenhuma cobrança será realizada.</p>
+        <form id="pagamento-form">
+            <label for="forma">Forma para a simulação</label>
+            <select id="forma" name="forma" required>
+                <option value="">Selecione</option>
+                <option value="pix">PIX (demonstrativo)</option>
+                <option value="cartao">Cartão (demonstrativo; sem dados do cartão)</option>
+                <option value="financiamento">Financiamento (demonstrativo)</option>
+            </select>
+            <button class="btn-destaque" type="submit">Registrar simulação</button>
+        </form>
+    </main>
+    <footer id="app-footer"></footer>
+</body>
+</html>
