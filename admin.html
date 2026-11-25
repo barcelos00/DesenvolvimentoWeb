@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFTCAR - Administração</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+    <script src="carros.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="textos.html">Artigos</a>
+        <a href="tabela.html">Especificações</a>
+        <a href="documentos.html">Documentos</a>
+        <a href="#" class="sair" onclick="sair(); return false;">Sair</a>
+    </nav>
+
+    <div class="container admin">
+
+        <h2>Painel do Administrador</h2>
+        <p id="admin-saudacao"></p>
+
+        <!-- ========== VEÍCULOS: CREATE e UPDATE ========== -->
+        <h3 id="titulo-form">Novo veículo</h3>
+
+        <form id="form-carro" class="admin-form" onsubmit="return salvarFormularioCarro();">
+            <input type="hidden" id="carro-id">
+
+            <div class="campo">
+                <label for="carro-nome">Nome</label>
+                <input type="text" id="carro-nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="carro-imagem">Imagem (caminho ou link)</label>
+                <input type="text" id="carro-imagem" placeholder="imagens/imagens_ex/clio.png" required>
+            </div>
+
+            <div class="campo campo-largo">
+                <label for="carro-descricao">Descrição</label>
+                <textarea id="carro-descricao" rows="3" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="carro-preco">Preço (R$)</label>
+                <input type="number" id="carro-preco" min="0.01" step="0.01" required>
+            </div>
+
+            <div class="campo">
+                <label for="carro-preco-antigo">Preço antigo (opcional, para promoção)</label>
+                <input type="number" id="carro-preco-antigo" min="0.01" step="0.01">
+            </div>
+
+            <div class="campo">
+                <label for="carro-km">Quilometragem (km)</label>
+                <input type="number" id="carro-km" min="0" step="1" required>
+            </div>
+
+            <div class="campo">
+                <label for="carro-ano">Ano (opcional)</label>
+                <input type="number" id="carro-ano" min="1900" max="2100" step="1">
+            </div>
+
+            <div class="campo">
+                <label for="carro-disponivel">Disponibilidade</label>
+                <select id="carro-disponivel">
+                    <option value="sim">Disponível</option>
+                    <option value="nao">Indisponível</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="carro-site">Site oficial (opcional)</label>
+                <input type="url" id="carro-site" placeholder="https://...">
+            </div>
+
+            <div class="campo campo-largo">
+                <p id="admin-mensagem"></p>
+                <button type="submit" class="btn-destaque">Salvar veículo</button>
+                <button type="button" id="btn-cancelar" class="botao-carro" onclick="limparFormulario()" hidden>Cancelar edição</button>
+            </div>
+        </form>
+
+        <!-- ========== VEÍCULOS: READ e DELETE ========== -->
+        <h3>Veículos cadastrados</h3>
+
+        <div class="tabela-rolagem">
+            <table class="admin-tabela">
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Km</th>
+                        <th>Ano</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-carros"></tbody>
+            </table>
+        </div>
+
+        <button type="button" class="botao-tabela" style="margin-top: 15px;" onclick="restaurarCatalogo()">
+            Restaurar catálogo original
+        </button>
+
+        <!-- ========== USUÁRIOS ========== -->
+        <h3>Usuários</h3>
+
+        <div class="tabela-rolagem">
+            <table class="admin-tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-usuarios"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
