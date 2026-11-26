@@ -693,16 +693,22 @@ a:focus-visible {
 
 .auth-link-admin {
     text-align: center;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 .auth-link-admin a {
-    color: #888888;
-    font-size: 13px;
+    display: inline-block;
+    color: #B3006B;
+    font-size: 16px;
     text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #B3006B;
+    border-radius: 12px;
+    transition: 0.2s;
 }
 
 .auth-link-admin a:hover {
-    color: #e0e0e0;
-    text-decoration: underline;
+    background-color: #B3006B;
+    color: #ffffff;
+    text-decoration: none;
 }
