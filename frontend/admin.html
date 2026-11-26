@@ -54,15 +54,17 @@
         </section>
         <h2>Veículos cadastrados (<span id="quantidade-veiculos">0</span>)</h2>
         <div id="admin-veiculos" class="table-wrap"></div>
-        <section class="painel-formulario">
+                <section class="painel-formulario">
             <h2>Contas de clientes e administradores</h2>
-            <p>O cadastro público cria somente contas de cliente. Use este formulário para criar uma conta administrativa ou cadastrar um cliente pelo painel.</p>
+            <p>O cadastro público cria somente contas de cliente. Use este formulário para criar, editar ou excluir contas pelo painel.</p>
+            <h3 id="titulo-form-usuario">Criar conta</h3>
             <form id="admin-usuario-form" class="form-painel">
+                <input type="hidden" name="id">
                 <label for="usuario-nome">Nome</label>
                 <input id="usuario-nome" name="nome" maxlength="120" autocomplete="name" required>
                 <label for="usuario-email">E-mail</label>
                 <input id="usuario-email" name="email" type="email" maxlength="190" autocomplete="email" required>
-                <label for="usuario-senha">Senha (mínimo 6 caracteres)</label>
+                <label for="usuario-senha" id="label-usuario-senha">Senha (mínimo 6 caracteres)</label>
                 <input id="usuario-senha" name="senha" type="password" minlength="6" autocomplete="new-password" required>
                 <label for="usuario-perfil">Tipo de conta</label>
                 <select id="usuario-perfil" name="perfil" required>
@@ -70,6 +72,7 @@
                     <option value="admin">Administrador</option>
                 </select>
                 <button class="btn-destaque" type="submit">Criar conta</button>
+                <button id="cancelar-edicao-usuario" class="botao-excluir" type="button" hidden>Cancelar edição</button>
             </form>
             <h3>Contas cadastradas</h3>
             <div id="admin-usuarios" class="table-wrap"></div>

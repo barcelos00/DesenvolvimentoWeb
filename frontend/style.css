@@ -690,3 +690,19 @@ a:focus-visible {
         margin: 16px auto;
     }
 }
+
+.auth-link-admin {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.auth-link-admin a {
+    color: #888888;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.auth-link-admin a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}

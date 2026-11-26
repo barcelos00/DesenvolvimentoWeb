@@ -505,9 +505,31 @@
         await initAdminUsers();
     }
 
+        function setUserForm(user) {
+        var form = document.getElementById("admin-usuario-form");
+        form.reset();
+        form.elements.id.value = user ? user.id : "";
+        document.getElementById("titulo-form-usuario").textContent = user ? "Editar conta" : "Criar conta";
+        document.getElementById("cancelar-edicao-usuario").hidden = !user;
+        document.getElementById("label-usuario-senha").textContent = user
+            ? "Nova senha (deixe em branco para manter a atual)"
+            : "Senha (mínimo 6 caracteres)";
+        form.elements.senha.required = !user;
+        form.querySelector("button.btn-destaque").textContent = user ? "Salvar conta" : "Criar conta";
+        if (!user) {
+            return;
+        }
+        form.elements.nome.value = user.nome;
+        form.elements.email.value = user.email;
+        form.elements.perfil.value = user.perfil;
+    }
+
     async function initAdminUsers() {
         var form = document.getElementById("admin-usuario-form");
         var list = document.getElementById("admin-usuarios");
+        document.getElementById("cancelar-edicao-usuario").addEventListener("click", function () {
+            setUserForm(null);
+        });
 
         async function refresh() {
             var result = await api("admin/users.php");
@@ -515,7 +537,7 @@
             var table = makeElement("table");
             var head = makeElement("thead");
             var header = makeElement("tr");
-            ["Nome", "E-mail", "Tipo de conta", "Criada em"].forEach(function (label) {
+            ["Nome", "E-mail", "Tipo de conta", "Criada em", "Ações"].forEach(function (label) {
                 header.appendChild(makeElement("th", "", label));
             });
             head.appendChild(header);
@@ -531,6 +553,29 @@
                 ].forEach(function (value) {
                     row.appendChild(makeElement("td", "", value));
                 });
+                var actions = makeElement("td", "acoes-admin");
+                var edit = makeElement("button", "botao-carro", "Editar");
+                edit.type = "button";
+                edit.addEventListener("click", function () {
+                    setUserForm(user);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+                var remove = makeElement("button", "botao-excluir", "Excluir");
+                remove.type = "button";
+                remove.addEventListener("click", async function () {
+                    if (!window.confirm("Excluir esta conta?")) {
+                        return;
+                    }
+                    try {
+                        await api("admin/users.php?id=" + encodeURIComponent(user.id), { method: "DELETE" });
+                        showMessage("Conta excluída.", "mensagem-sucesso");
+                        await refresh();
+                    } catch (error) {
+                        showMessage(error.message, "mensagem-erro");
+                    }
+                });
+                actions.append(edit, remove);
+                row.appendChild(actions);
                 body.appendChild(row);
             });
             table.appendChild(body);
@@ -539,17 +584,18 @@
 
         form.addEventListener("submit", async function (event) {
             event.preventDefault();
+            var id = form.elements.id.value;
+            var body = {
+                nome: form.elements.nome.value,
+                email: form.elements.email.value,
+                senha: form.elements.senha.value,
+                perfil: form.elements.perfil.value
+            };
             try {
-                var result = await api("admin/users.php", {
-                    method: "POST",
-                    body: {
-                        nome: form.elements.nome.value,
-                        email: form.elements.email.value,
-                        senha: form.elements.senha.value,
-                        perfil: form.elements.perfil.value
-                    }
-                });
-                form.reset();
+                var result = id
+                    ? await api("admin/users.php?id=" + encodeURIComponent(id), { method: "PUT", body: body })
+                    : await api("admin/users.php", { method: "POST", body: body });
+                setUserForm(null);
                 showMessage(result.message, "mensagem-sucesso");
                 await refresh();
             } catch (error) {
@@ -605,7 +651,7 @@
         try {
             var session = await api("auth.php");
             csrfToken = session.csrfToken;
-            var isAuthPage = page === "login" || page === "cadastro";
+            var isAuthPage = page === "login" || page === "cadastro" || page === "admin-login";
             if (isAuthPage && session.user) {
                 window.location.replace("index.html");
                 return;
@@ -627,6 +673,8 @@
                 initLogin();
             } else if (page === "cadastro") {
                 initRegistration();
+            } else if (page === "admin-login") {
+                initAdminLogin();
             } else if (page === "home") {
                 await initHome();
             } else if (page === "galeria") {
@@ -681,6 +729,32 @@
                 });
                 csrfToken = result.csrfToken;
                 window.location.replace("index.html");
+            } catch (error) {
+                showMessage(error.message, "mensagem-erro");
+            }
+        });
+    }
+        function initAdminLogin() {
+        var form = document.getElementById("admin-login-form");
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            try {
+                var result = await api("auth.php?acao=login", {
+                    method: "POST",
+                    body: {
+                        email: form.elements.email.value,
+                        senha: form.elements.senha.value
+                    }
+                });
+                csrfToken = result.csrfToken;
+                if (result.user.perfil !== "admin") {
+                    await api("auth.php?acao=sair", { method: "POST", body: {} });
+                    var session = await api("auth.php");
+                    csrfToken = session.csrfToken;
+                    showMessage("Esta conta não tem acesso administrativo.", "mensagem-erro");
+                    return;
+                }
+                window.location.replace("admin.html");
             } catch (error) {
                 showMessage(error.message, "mensagem-erro");
             }
